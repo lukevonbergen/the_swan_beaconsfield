@@ -223,6 +223,7 @@ a:hover, button:hover, .nav-link:hover, .booking-btn:hover {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0 20px;
     }
     
     .footer-contact {
@@ -232,6 +233,17 @@ a:hover, button:hover, .nav-link:hover, .booking-btn:hover {
     
     .footer-hours {
         padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .contact-address,
+    .contact-info {
+        margin-bottom: 30px;
+    }
+    
+    .contact-address:last-child,
+    .contact-info:last-child {
+        margin-bottom: 0;
     }
 }
 
