@@ -642,9 +642,21 @@ h2 {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* History page specific */
+/* History section in About page */
+.history-section {
+    margin-top: 80px;
+}
+
+.history-intro {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
 .history-timeline {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .timeline-item {
@@ -691,11 +703,13 @@ h2 {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.timeline-text h2 {
-    font-size: 28px;
+.timeline-text h2,
+.timeline-text h3 {
+    font-size: 24px;
     color: #6b4423;
     margin-bottom: 20px;
     text-align: left;
+    font-weight: 400;
 }
 
 .timeline-text p {
