@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Load footer component
+    loadComponent('footer-placeholder', 'components/footer.html');
     // Only apply smooth scrolling to anchor links (links that start with #)
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -137,3 +139,30 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', initMobileMenu);
     initMobileMenu();
 });
+
+// Component loader function
+function loadComponent(elementId, componentPath) {
+    fetch(componentPath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(html => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = html;
+            } else {
+                console.warn(`Element with ID "${elementId}" not found`);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading component:', error);
+            // Fallback: show a basic footer message
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = '<footer class="footer"><div style="text-align: center; padding: 40px;"><p>&copy; 2024 The Swan Beaconsfield. All rights reserved.</p></div></footer>';
+            }
+        });
+}
