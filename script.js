@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Load navigation component
+    loadComponent('nav-placeholder', 'components/nav.html').then(() => {
+        // Set active navigation state after nav is loaded
+        setActiveNavigation();
+    });
     // Load footer component
     loadComponent('footer-placeholder', 'components/footer.html');
     // Only apply smooth scrolling to anchor links (links that start with #)
@@ -122,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     background: none;
                     border: none;
                     font-size: 24px;
-                    color: #6b4423;
+                    color: #2c2c2c;
                     cursor: pointer;
                     display: block;
                 `;
@@ -142,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Component loader function
 function loadComponent(elementId, componentPath) {
-    fetch(componentPath)
+    return fetch(componentPath)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -165,4 +170,21 @@ function loadComponent(elementId, componentPath) {
                 element.innerHTML = '<footer class="footer"><div style="text-align: center; padding: 40px;"><p>&copy; 2024 The Swan Beaconsfield. All rights reserved.</p></div></footer>';
             }
         });
+}
+
+// Set active navigation based on current page
+function setActiveNavigation() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        if (href === currentPage || 
+            (currentPage === '' && href === 'index.html') ||
+            (currentPage === 'index.html' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
 }
