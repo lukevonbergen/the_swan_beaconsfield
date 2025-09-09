@@ -230,6 +230,40 @@ a:hover, button:hover, .nav-link:hover, .booking-btn:hover {
     transform: scale(1.02);
 }
 
+/* Homepage Hero Specific Styles */
+.homepage-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0;
+}
+
+.homepage-hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.homepage-hero-text {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.homepage-hero-text .page-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.homepage-hero-text .page-subtitle {
+    font-size: 20px;
+    text-align: right;
+    line-height: 1.6;
+}
+
 /* Section Headings */
 h2 {
     font-size: 36px;
@@ -1343,5 +1377,32 @@ h2 {
     
     .hero-text h2 {
         font-size: 24px;
+    }
+    
+    /* Homepage Hero Mobile */
+    .homepage-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .homepage-hero-image {
+        margin-left: 0;
+        height: 300px;
+    }
+    
+    .homepage-hero-text {
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .homepage-hero-text .page-title {
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .homepage-hero-text .page-subtitle {
+        font-size: 18px;
+        text-align: center;
     }
 }
