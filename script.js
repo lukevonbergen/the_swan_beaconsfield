@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('nav-placeholder', 'components/nav.html').then(() => {
         // Set active navigation state after nav is loaded
         setActiveNavigation();
+        // Initialize mobile menu after nav is loaded
+        initMobileMenu();
     });
     // Load footer component
     loadComponent('footer-placeholder', 'components/footer.html');
@@ -112,37 +114,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile menu toggle (for future enhancement)
+    // Mobile menu toggle
     function initMobileMenu() {
-        const nav = document.querySelector('.nav-menu');
-        const navContainer = document.querySelector('.nav-container');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+        const navLinks = document.querySelectorAll('.nav-link');
         
-        // Add mobile menu button for smaller screens
-        if (window.innerWidth <= 768) {
-            if (!document.querySelector('.mobile-menu-btn')) {
-                const mobileMenuBtn = document.createElement('button');
-                mobileMenuBtn.classList.add('mobile-menu-btn');
-                mobileMenuBtn.innerHTML = '☰';
-                mobileMenuBtn.style.cssText = `
-                    background: none;
-                    border: none;
-                    font-size: 24px;
-                    color: #2c2c2c;
-                    cursor: pointer;
-                    display: block;
-                `;
-                
-                navContainer.appendChild(mobileMenuBtn);
-                
-                mobileMenuBtn.addEventListener('click', function() {
-                    nav.classList.toggle('mobile-active');
-                });
+        if (!mobileToggle || !navMenu || !overlay) return;
+        
+        // Toggle mobile menu
+        mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu on window resize if open
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
             }
-        }
+        });
     }
-    
-    window.addEventListener('resize', initMobileMenu);
-    initMobileMenu();
 });
 
 // Component loader function
