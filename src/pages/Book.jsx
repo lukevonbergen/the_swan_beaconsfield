@@ -1,0 +1,79 @@
+import React from 'react';
+import PageHero from '../components/PageHero';
+import SectionContainer from '../components/SectionContainer';
+
+const Book = () => {
+  return (
+    <main className="pt-20">
+      <PageHero 
+        title="Book a Table"
+        subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Swan is truly memorable."
+        imageSrc="https://images.unsplash.com/photo-1424847651672-5d1b2ff7b4d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+        imageAlt="Elegant restaurant dining area with warm lighting"
+        textAlign="left"
+      />
+
+      <SectionContainer>
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark">
+            ResDiary Integration Coming Soon
+          </h2>
+          <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
+            We're currently setting up our online booking system through ResDiary to make reserving your table even easier. 
+            In the meantime, please call us directly to book your table.
+          </p>
+          
+          <div className="bg-gray-50 p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-normal text-brand-dark mb-4">
+              Book by Phone
+            </h3>
+            <p className="text-lg text-brand-gray mb-6">
+              Call us to reserve your table today
+            </p>
+            <a href="tel:01494673339" className="nav-link text-xl font-bold">
+              01494 673 339
+            </a>
+            <div className="mt-6 text-sm text-brand-gray">
+              <p>Available during opening hours:</p>
+              <p>Monday-Thursday: 12:00pm - 11:00pm</p>
+              <p>Friday-Saturday: 12:00pm - 12:00am</p>
+              <p>Sunday: 12:00pm - 10:30pm</p>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer background="gray">
+        <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+          Booking Information
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div>
+            <h3 className="text-xl font-normal text-brand-dark mb-4">
+              What to Expect
+            </h3>
+            <ul className="space-y-3 text-brand-gray">
+              <li>• Tables are held for 15 minutes past reservation time</li>
+              <li>• Large groups (8+) may require a deposit</li>
+              <li>• Sunday roasts: bookings recommended after 2 PM</li>
+              <li>• Please inform us of any dietary requirements</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-normal text-brand-dark mb-4">
+              Special Occasions
+            </h3>
+            <ul className="space-y-3 text-brand-gray">
+              <li>• Let us know about birthdays or anniversaries</li>
+              <li>• Private dining room available for 10-40 guests</li>
+              <li>• Customizable menus for special events</li>
+              <li>• Contact us for wedding and corporate bookings</li>
+            </ul>
+          </div>
+        </div>
+      </SectionContainer>
+    </main>
+  );
+};
+
+export default Book;
