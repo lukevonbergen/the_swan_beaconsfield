@@ -14,7 +14,7 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
               {title}
             </h1>
             {subtitle && (
-              <p className="text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl">
+              <p className={`text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl ${textAlign === 'right' ? 'ml-auto' : ''}`}>
                 {subtitle}
               </p>
             )}
@@ -44,7 +44,7 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
               {title}
             </h1>
             {subtitle && (
-              <p className="text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl">
+              <p className={`text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl ${textAlign === 'right' ? 'ml-auto' : ''}`}>
                 {subtitle}
               </p>
             )}

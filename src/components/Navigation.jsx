@@ -102,6 +102,17 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div className={`fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform transition-transform duration-300 z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        {/* Close button */}
+        <button
+          onClick={closeMobileMenu}
+          className="absolute top-6 right-6 text-brand-dark hover:text-black transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
         <div className="pt-24 px-10">
           <ul className="space-y-6">
             <li>
