@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="logo flex items-center">
           <Link to="/" className="flex items-center gap-3 no-underline hover:no-underline">
             <img 
-              src="/images/TheOldSwan_Logo_White.png" 
+              src="/images/TheSwanOld_NewLogo.png" 
               alt="The Old Swan Logo" 
               className="h-12 w-auto"
             />
