@@ -8,8 +8,8 @@ const Book = () => {
       <PageHero 
         title="Book a Table"
         subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Old Swan is truly memorable."
-        imageSrc="https://images.unsplash.com/photo-1424847651672-5d1b2ff7b4d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Elegant restaurant dining area with warm lighting"
+        imageSrc="/images/c3168540-03b4-459c-9523-7b4c0a4814ba.JPG"
+        imageAlt="Dining area at The Old Swan"
         textAlign="left"
       />
 

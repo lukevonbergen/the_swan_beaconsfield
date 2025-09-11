@@ -11,7 +11,7 @@ const Events = () => {
       date: "Every Tuesday",
       time: "8:00 PM",
       description: "Test your knowledge in our weekly quiz night! Teams of up to 6 people compete for pub vouchers and bragging rights. Topics range from general knowledge to local history.",
-      imageSrc: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/747330b2-c342-47b8-9839-f7db34cfcd89.JPG",
       isRecurring: true
     },
     {
@@ -19,7 +19,7 @@ const Events = () => {
       date: "First Friday of Every Month",
       time: "7:30 PM - 10:30 PM",
       description: "Enjoy smooth jazz performances from local musicians. Create the perfect atmosphere for a romantic evening or relaxed night out with friends.",
-      imageSrc: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/01a1bcb1-9a0c-417a-aaed-75197c7464fb.JPG",
       isRecurring: true
     },
     {
@@ -27,7 +27,7 @@ const Events = () => {
       date: "Every Sunday",
       time: "12:00 PM - 6:00 PM",
       description: "Traditional British Sunday roast with all the trimmings. Choose from beef, lamb, pork, or our vegetarian nut roast. Booking recommended.",
-      imageSrc: "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      imageSrc: "/images/af0e0fa9-f763-448f-ab33-7ef773394ba1.JPG",
       isRecurring: true
     },
     {
@@ -35,21 +35,21 @@ const Events = () => {
       date: "Saturday, March 23rd",
       time: "7:00 PM - 9:30 PM",
       description: "Discover new favorites at our quarterly wine tasting. Our sommelier will guide you through a selection of six wines paired with artisanal cheeses.",
-      imageSrc: "https://images.unsplash.com/photo-1513618364582-7b2862b3bf85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageSrc: "/images/5a9eecfe-7dc0-4072-8ab4-b8c92db8240b.JPG"
     },
     {
       title: "Burns Night Celebration",
       date: "Friday, January 25th",
       time: "6:30 PM - 11:00 PM",
       description: "Join us for a traditional Burns Night supper with haggis, neeps and tatties, plus Scottish folk music and poetry readings.",
-      imageSrc: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageSrc: "/images/dcb2b07c-1084-44c7-99b0-ebd4d8751f40.JPG"
     },
     {
       title: "Spring Beer Festival",
       date: "April 12-14th",
       time: "All Day",
       description: "Three days celebrating the best of British brewing. Over 20 guest ales from local and regional breweries, plus traditional pub games.",
-      imageSrc: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageSrc: "/images/e86e3915-f023-4e63-bd8d-a0f9c6aac742.JPG"
     }
   ];
 
@@ -77,8 +77,8 @@ const Events = () => {
       <PageHero 
         title="Events at The Old Swan"
         subtitle="From weekly quiz nights to special celebrations, there's always something happening at The Old Swan. Join our community for memorable evenings of entertainment, great food, and good company."
-        imageSrc="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Live music performance at a pub"
+        imageSrc="/images/5869f0ff-535d-4eae-8e37-33ca9c9e25fa.JPG"
+        imageAlt="Events and gatherings at The Old Swan"
         textAlign="left"
       />
 
@@ -119,8 +119,8 @@ const Events = () => {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1519167758481-83f29d8ae8e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-              alt="Private dining room setup"
+              src="/images/40571662-feaf-4f84-b531-ee22c7b42298.JPG" 
+              alt="Private dining space at The Old Swan"
               className="w-full h-[500px] object-cover rounded-lg shadow-lg"
             />
           </div>

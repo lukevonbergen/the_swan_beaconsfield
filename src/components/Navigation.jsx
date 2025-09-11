@@ -21,9 +21,13 @@ const Navigation = () => {
     <header className="fixed top-0 w-full bg-white shadow-md z-50 font-serif">
       <nav className="flex justify-between items-center h-20 px-10 md:px-16">
         {/* Logo */}
-        <div className="logo">
-          <Link to="/" className="text-2xl font-normal text-brand-dark no-underline hover:no-underline">
-            The Old Swan Beaconsfield
+        <div className="logo flex items-center">
+          <Link to="/" className="flex items-center gap-3 no-underline hover:no-underline">
+            <img 
+              src="/images/TheOldSwan_Logo.svg" 
+              alt="The Old Swan Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
         </div>
 

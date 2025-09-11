@@ -9,8 +9,8 @@ const About = () => {
       <PageHero 
         title="About The Old Swan"
         subtitle="Discover the heart and soul of Beaconsfield's most beloved pub. With over 175 years of tradition, we combine authentic British hospitality with modern comfort."
-        imageSrc="https://images.unsplash.com/photo-1585151364670-de83fb61cd3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Traditional pub interior with warm lighting and wooden beams"
+        imageSrc="/images/TheOldSwan_Pub.JPG"
+        imageAlt="The Old Swan pub exterior in Beaconsfield"
         textAlign="right"
       />
 
@@ -33,8 +33,8 @@ const About = () => {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-              alt="The Swan pub interior"
+              src="/images/67747257-6c24-4c47-a0b0-6fe9d1b313d2.JPG" 
+              alt="The Old Swan interior atmosphere"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             />
           </div>

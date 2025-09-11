@@ -8,8 +8,8 @@ const Contact = () => {
       <PageHero 
         title="Contact Us"
         subtitle="Get in touch - we'd love to hear from you. Whether you have questions about our menu, want to book a table, or are planning a special event, our friendly team is here to help."
-        imageSrc="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        imageAlt="The Swan pub exterior at golden hour"
+        imageSrc="/images/TheOldSwan_Pub.JPG"
+        imageAlt="The Old Swan pub exterior in Beaconsfield"
         textAlign="right"
       />
 

@@ -211,8 +211,8 @@ const Menu = () => {
       <PageHero 
         title="Our Menu"
         subtitle="Discover our selection of traditional British pub classics, made with locally sourced ingredients and served with pride. From hearty mains to indulgent desserts, we have something for everyone."
-        imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Delicious pub food spread"
+        imageSrc="/images/93e1019d-ce9b-4ab5-8d44-c90792c3bbcb.JPG"
+        imageAlt="Delicious food at The Old Swan"
         textAlign="left"
       />
 

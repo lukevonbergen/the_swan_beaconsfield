@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="flex-1 min-w-[400px] p-8 md:p-12">
         <div className="h-full relative">
           <img 
-            src="https://lh3.googleusercontent.com/p/AF1QipNvQEpVqX3Q6o_KvAn8jyiya_7MG9wfugSMmtvw=s1360-w1360-h1020-rw" 
-            alt="The Swan Beaconsfield exterior" 
+            src="/images/TheOldSwan_Pub.JPG" 
+            alt="The Old Swan Beaconsfield exterior" 
             className="w-full h-full min-h-[500px] object-cover rounded-xl shadow-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
