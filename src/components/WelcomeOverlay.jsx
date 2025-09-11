@@ -104,7 +104,7 @@ const WelcomeOverlay = () => {
           }}
         >
           Welcome to<br />
-          The Swan Beaconsfield
+          The Old Swan Beaconsfield
         </h1>
 
         {/* Contact Links */}

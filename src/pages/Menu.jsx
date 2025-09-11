@@ -7,91 +7,202 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
   const starters = [
     {
-      name: "Classic Prawn Cocktail",
-      description: "Fresh Atlantic prawns served with crisp lettuce, Marie Rose sauce, and brown bread",
-      price: "8.95",
-      isGlutenFree: true
+      name: "Garlic and Herb King Prawns",
+      description: "Served with freshly baked soda bread",
+      price: "10.00"
     },
     {
-      name: "Duck Liver Pâté",
-      description: "Smooth duck liver pâté with caramelised onion chutney, toasted sourdough, and mixed leaves",
-      price: "7.50"
-    },
-    {
-      name: "Soup of the Day",
-      description: "Freshly prepared daily with crusty bread and butter",
-      price: "6.25",
+      name: "Classic Tomato and Basil Bruschetta",
+      description: "Fresh tomatoes and basil on toasted bread",
+      price: "8.00",
       isVegetarian: true
     },
     {
-      name: "Crispy Whitebait",
-      description: "Lightly dusted and fried, served with tartare sauce and lemon",
-      price: "7.95"
+      name: "Parmesan Crumbed Mushrooms",
+      description: "With tartar sauce",
+      price: "8.00",
+      isVegetarian: true
+    },
+    {
+      name: "Sausage Rolls",
+      description: "With wholegrain mustard mayo",
+      price: "7.50"
+    },
+    {
+      name: "Baked Goats Cheese & Beetroot Salad",
+      description: "With rocket, candied walnuts and balsamic glaze",
+      price: "9.00/14.00",
+      isVegetarian: true
+    },
+    {
+      name: "Soup of the Day",
+      description: "With rustic bread and butter",
+      price: "7.00",
+      isVegetarian: true
     }
   ];
 
   const mains = [
     {
-      name: "Beer Battered Fish & Chips",
-      description: "Fresh cod in crispy beer batter with hand-cut chips, mushy peas, and tartare sauce",
-      price: "16.95"
+      name: "Beer Battered Fish and Chips",
+      description: "Peas and tartar sauce",
+      price: "15.00"
     },
     {
-      name: "Slow-Cooked Beef & Ale Pie",
-      description: "Tender beef braised in local ale with seasonal vegetables, topped with buttery pastry",
-      price: "15.50"
+      name: "King Prawn, Chilli & Herb Linguini",
+      description: "With roasted garlic, cherry tomatoes and basil sauce",
+      price: "16.00"
     },
     {
-      name: "Pan-Seared Salmon",
-      description: "Atlantic salmon fillet with crushed new potatoes, green beans, and hollandaise sauce",
-      price: "18.95",
-      isGlutenFree: true
+      name: "Beef or Chicken Burger",
+      description: "Brioche bun with cheese, baby gem, tomato, gherkin and rustic fries. Add bacon +£1.50",
+      price: "15.00"
     },
     {
-      name: "Traditional Sunday Roast",
-      description: "Slow-roasted beef with Yorkshire pudding, roast potatoes, seasonal vegetables, and gravy",
-      price: "17.95"
+      name: "10oz Sirloin Steak",
+      description: "Vine roasted cherry tomatoes, sautéed mushrooms, onion rings, peppercorn sauce and garlic new potatoes",
+      price: "25.00"
     },
     {
-      name: "Wild Mushroom Risotto",
-      description: "Creamy arborio rice with mixed wild mushrooms, parmesan, and truffle oil",
-      price: "14.95",
-      isVegetarian: true,
-      isGlutenFree: true
+      name: "Halls of Hazelmere Sausages",
+      description: "Colcannon mash, seasonal greens, and caramelised onion gravy",
+      price: "15.00"
     },
     {
-      name: "Lamb Shank",
-      description: "Slow-braised lamb shank with rosemary and red wine jus, served with minted mash",
-      price: "19.95",
-      isGlutenFree: true
+      name: "Panko Crumbed Chicken Schnitzel",
+      description: "Mushroom sauce, rustic fries and house salad",
+      price: "16.00"
+    },
+    {
+      name: "Pie of the Week",
+      description: "Ask server for details - with creamy mashed potatoes and seasonal greens",
+      price: "16.00"
+    }
+  ];
+
+  const sharingSnacks = [
+    {
+      name: "BBQ Glazed Sticky Chicken Wings",
+      description: "With hot sauce",
+      price: "12.00"
+    },
+    {
+      name: "Baked Camembert",
+      description: "With red onion chutney and rustic bread",
+      price: "12.00",
+      isVegetarian: true
+    },
+    {
+      name: "Nachos",
+      description: "Tortilla chips, melted cheese, salsa, sour cream and guacamole",
+      price: "10.00",
+      isVegetarian: true
+    },
+    {
+      name: "Selection of Rustic Bread & Olives",
+      description: "Balsamic vinegar, olive oil and butter",
+      price: "7.00",
+      isVegetarian: true
+    },
+    {
+      name: "Charcuterie",
+      description: "Cured meats, olives, pickled onions & gherkins, cheese, chutney and rustic bread",
+      price: "15.00"
+    },
+    {
+      name: "Roasted Garlic & Rosemary Hummus",
+      description: "With flat bread",
+      price: "7.00",
+      isVegetarian: true
+    },
+    {
+      name: "Scampi and Tartar Sauce",
+      description: "",
+      price: "7.00"
     }
   ];
 
   const desserts = [
     {
-      name: "Sticky Toffee Pudding",
-      description: "Classic British pudding with butterscotch sauce and vanilla ice cream",
-      price: "7.50",
-      isVegetarian: true
-    },
-    {
-      name: "Eton Mess",
-      description: "Fresh strawberries, crushed meringue, and whipped cream",
-      price: "6.95",
-      isVegetarian: true,
-      isGlutenFree: true
-    },
-    {
-      name: "Cheese Board",
-      description: "Selection of British cheeses with crackers, grapes, and chutney",
-      price: "9.95",
+      name: "Malva Pudding",
+      description: "Traditional SA dessert",
+      price: "6.00",
       isVegetarian: true
     },
     {
       name: "Chocolate Brownie",
-      description: "Warm chocolate brownie with salted caramel ice cream",
-      price: "7.25",
+      description: "",
+      price: "6.50",
       isVegetarian: true
+    },
+    {
+      name: "Ice Cream",
+      description: "Chocolate, strawberry, vanilla",
+      price: "5.00",
+      isVegetarian: true
+    },
+    {
+      name: "Cheesecake",
+      description: "With berry compote",
+      price: "7.50",
+      isVegetarian: true
+    },
+    {
+      name: "Sorbet",
+      description: "Lemon, raspberry",
+      price: "5.00",
+      isVegetarian: true
+    }
+  ];
+
+  const sides = [
+    {
+      name: "Rustic Fries",
+      description: "",
+      price: "4.50",
+      isVegetarian: true
+    },
+    {
+      name: "Mash",
+      description: "",
+      price: "4.50",
+      isVegetarian: true
+    },
+    {
+      name: "Colcannon Mash",
+      description: "",
+      price: "5.00",
+      isVegetarian: true
+    },
+    {
+      name: "Mixed Salad",
+      description: "",
+      price: "4.50",
+      isVegetarian: true
+    },
+    {
+      name: "Seasonal Greens",
+      description: "",
+      price: "5.00",
+      isVegetarian: true
+    }
+  ];
+
+  const kidsMenu = [
+    {
+      name: "Chicken Tenders",
+      description: "All with rustic fries",
+      price: "6.50"
+    },
+    {
+      name: "Hot Dog",
+      description: "All with rustic fries",
+      price: "7.00"
+    },
+    {
+      name: "Kids Burger",
+      description: "All with rustic fries",
+      price: "6.50"
     }
   ];
 
@@ -131,7 +242,7 @@ const Menu = () => {
 
       {/* Starters */}
       <SectionContainer>
-        <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Starters
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -143,7 +254,7 @@ const Menu = () => {
 
       {/* Main Courses */}
       <SectionContainer background="gray">
-        <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Main Courses
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -153,13 +264,51 @@ const Menu = () => {
         </div>
       </SectionContainer>
 
-      {/* Desserts */}
+      {/* Sharing & Snacks */}
       <SectionContainer>
-        <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
-          Desserts
+        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+          Sharing & Snacks
         </h2>
         <div className="max-w-4xl mx-auto">
-          {desserts.map((item, index) => (
+          {sharingSnacks.map((item, index) => (
+            <MenuItem key={index} {...item} />
+          ))}
+        </div>
+      </SectionContainer>
+
+      {/* Desserts & Sides */}
+      <SectionContainer background="gray">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+              Desserts
+            </h2>
+            <div>
+              {desserts.map((item, index) => (
+                <MenuItem key={index} {...item} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+              Sides
+            </h2>
+            <div>
+              {sides.map((item, index) => (
+                <MenuItem key={index} {...item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      {/* Kids Menu */}
+      <SectionContainer>
+        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+          Under 12's <span className="text-lg">(All with rustic fries)</span>
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          {kidsMenu.map((item, index) => (
             <MenuItem key={index} {...item} />
           ))}
         </div>

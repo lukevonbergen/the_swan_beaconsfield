@@ -19,7 +19,7 @@ const Contact = () => {
             Coming Soon
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-            We're currently setting up our contact system. In the meantime, you can reach us directly using the contact information in our footer, or visit us in person at The Swan.
+            We're currently setting up our contact system. In the meantime, you can reach us directly using the contact information in our footer, or visit us in person at The Old Swan.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

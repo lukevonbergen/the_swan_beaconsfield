@@ -43,7 +43,7 @@ const PasswordGate = ({ children }) => {
         <div className="max-w-md w-full px-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-normal text-brand-dark mb-4">
-              The Swan Beaconsfield
+              The Old Swan Beaconsfield
             </h1>
             <p className="text-lg text-brand-gray">
               Please enter the password to access the website

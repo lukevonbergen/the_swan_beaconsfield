@@ -7,7 +7,7 @@ const About = () => {
   return (
     <main className="pt-20">
       <PageHero 
-        title="About The Swan"
+        title="About The Old Swan"
         subtitle="Discover the heart and soul of Beaconsfield's most beloved pub. With over 175 years of tradition, we combine authentic British hospitality with modern comfort."
         imageSrc="https://images.unsplash.com/photo-1585151364670-de83fb61cd3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
         imageAlt="Traditional pub interior with warm lighting and wooden beams"
@@ -22,13 +22,13 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-lg text-brand-gray mb-6 leading-relaxed">
-              Nestled in the heart of Beaconsfield, The Swan has been a cornerstone of the local community for over 175 years. Our traditional British pub combines the charm of yesteryear with modern comfort, offering an authentic experience that celebrates the finest of British pub culture.
+              Nestled in the heart of Beaconsfield, The Old Swan has been a cornerstone of the local community for over 175 years. Our traditional British pub combines the charm of yesteryear with modern comfort, offering an authentic experience that celebrates the finest of British pub culture.
             </p>
             <p className="text-lg text-brand-gray mb-6 leading-relaxed">
               We pride ourselves on serving locally sourced ingredients, traditional ales from regional breweries, and maintaining the warm, welcoming atmosphere that has made us a beloved gathering place for generations of locals and visitors alike.
             </p>
             <p className="text-lg text-brand-gray leading-relaxed">
-              Whether you're joining us for a quiet pint after work, a hearty Sunday roast with the family, or celebrating a special occasion, The Swan offers an experience steeped in tradition and delivered with genuine hospitality.
+              Whether you're joining us for a quiet pint after work, a hearty Sunday roast with the family, or celebrating a special occasion, The Old Swan offers an experience steeped in tradition and delivered with genuine hospitality.
             </p>
           </div>
           <div>
@@ -55,7 +55,7 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-normal text-brand-dark mb-2">The Beginning</h3>
                 <p className="text-brand-gray leading-relaxed">
-                  The Swan first opened its doors as a coaching inn, serving travelers on the London to Oxford route. 
+                  The Old Swan first opened its doors as a coaching inn, serving travelers on the London to Oxford route. 
                   The original building featured stables and accommodation for weary journeyers.
                 </p>
               </div>
@@ -68,7 +68,7 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-normal text-brand-dark mb-2">The Golden Age</h3>
                 <p className="text-brand-gray leading-relaxed">
-                  During the roaring twenties, The Swan became the social hub of Beaconsfield. 
+                  During the roaring twenties, The Old Swan became the social hub of Beaconsfield. 
                   Major renovations added the distinctive Tudor-style frontage that remains today.
                 </p>
               </div>
@@ -94,7 +94,7 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-normal text-brand-dark mb-2">Continuing Tradition</h3>
                 <p className="text-brand-gray leading-relaxed">
-                  Now in its fourth century of service, The Swan continues to evolve while honoring its rich heritage. 
+                  Now in its fourth century of service, The Old Swan continues to evolve while honoring its rich heritage. 
                   We remain committed to serving the finest food, drink, and hospitality to our community.
                 </p>
               </div>
@@ -136,7 +136,7 @@ const About = () => {
       <SectionContainer background="gray">
         <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-normal mb-4 text-brand-dark">
-            Experience The Swan Tradition
+            Experience The Old Swan Tradition
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto">
             Join us for an unforgettable dining experience where history meets hospitality.

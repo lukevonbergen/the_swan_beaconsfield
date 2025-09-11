@@ -7,7 +7,7 @@ const Book = () => {
     <main className="pt-20">
       <PageHero 
         title="Book a Table"
-        subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Swan is truly memorable."
+        subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Old Swan is truly memorable."
         imageSrc="https://images.unsplash.com/photo-1424847651672-5d1b2ff7b4d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
         imageAlt="Elegant restaurant dining area with warm lighting"
         textAlign="left"

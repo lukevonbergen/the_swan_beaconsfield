@@ -64,7 +64,7 @@ const Events = () => {
     },
     {
       title: "Birthday Parties",
-      description: "Make your birthday memorable with a private celebration at The Swan. We offer flexible packages for all ages and group sizes."
+      description: "Make your birthday memorable with a private celebration at The Old Swan. We offer flexible packages for all ages and group sizes."
     },
     {
       title: "Funeral Wakes",
@@ -75,8 +75,8 @@ const Events = () => {
   return (
     <main className="pt-20">
       <PageHero 
-        title="Events at The Swan"
-        subtitle="From weekly quiz nights to special celebrations, there's always something happening at The Swan. Join our community for memorable evenings of entertainment, great food, and good company."
+        title="Events at The Old Swan"
+        subtitle="From weekly quiz nights to special celebrations, there's always something happening at The Old Swan. Join our community for memorable evenings of entertainment, great food, and good company."
         imageSrc="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
         imageAlt="Live music performance at a pub"
         textAlign="left"
@@ -102,7 +102,7 @@ const Events = () => {
               Private Events
             </h2>
             <p className="text-lg text-brand-gray mb-8 leading-relaxed">
-              The Swan is the perfect venue for your special occasions. Our experienced events team will work with you to create memorable celebrations that your guests will talk about for years to come.
+              The Old Swan is the perfect venue for your special occasions. Our experienced events team will work with you to create memorable celebrations that your guests will talk about for years to come.
             </p>
             <div className="space-y-6">
               {privateEvents.map((event, index) => (

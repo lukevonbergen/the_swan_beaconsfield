@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="max-w-2xl ml-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-8 text-brand-dark leading-tight">
             Welcome to<br />
-            <span className="text-brand-gray">The Swan Beaconsfield</span>
+            <span className="text-brand-gray">The Old Swan Beaconsfield</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-brand-gray leading-relaxed font-light">
             A traditional British pub serving the finest ales, hearty meals, and warm hospitality since 1847.

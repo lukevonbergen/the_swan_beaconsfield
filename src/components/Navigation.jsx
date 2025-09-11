@@ -23,7 +23,7 @@ const Navigation = () => {
         {/* Logo */}
         <div className="logo">
           <Link to="/" className="text-2xl font-normal text-brand-dark no-underline hover:no-underline">
-            The Swan Beaconsfield
+            The Old Swan Beaconsfield
           </Link>
         </div>
 

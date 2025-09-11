@@ -14,7 +14,7 @@ const Home = () => {
       rating: 5
     },
     {
-      quote: "The Swan has been our family's go-to pub for celebrations for over 20 years. Always consistently excellent food and the warmest welcome.",
+      quote: "The Old Swan has been our family's go-to pub for celebrations for over 20 years. Always consistently excellent food and the warmest welcome.",
       author: "James Thompson",
       location: "Beaconsfield",
       rating: 5
@@ -53,7 +53,7 @@ const Home = () => {
       {/* Features Section */}
       <SectionContainer>
         <h2 className="text-3xl md:text-4xl font-normal mb-12 text-brand-dark text-center">
-          Why Choose The Swan
+          Why Choose The Old Swan
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
@@ -115,7 +115,7 @@ const Home = () => {
             Ready for Your Visit?
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-            Join us at The Swan for an unforgettable dining experience. Whether it's a quick drink, family meal, or special celebration, we're here to make your visit memorable.
+            Join us at The Old Swan for an unforgettable dining experience. Whether it's a quick drink, family meal, or special celebration, we're here to make your visit memorable.
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <Link to="/book" className="nav-link text-xl font-bold">
