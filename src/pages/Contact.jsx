@@ -32,8 +32,8 @@ const Contact = () => {
             
             <div className="text-center">
               <h3 className="text-xl font-normal text-brand-dark mb-4">Email</h3>
-              <a href="mailto:info@theswanbeaconsfield.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
-                info@theswanbeaconsfield.co.uk
+              <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
+                info@theoldswanbeaconsfield.co.uk
               </a>
             </div>
             
