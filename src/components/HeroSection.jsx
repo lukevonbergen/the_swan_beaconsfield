@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="flex-1 min-w-[400px] p-8 md:p-12">
         <div className="h-full relative">
           <img 
-            src="/images/TheOldSwan_Pub.JPG" 
+            src="/images/The_Swan_Homepage.JPG" 
             alt="The Old Swan Beaconsfield exterior" 
             className="w-full h-full min-h-[500px] object-cover rounded-xl shadow-2xl"
           />
