@@ -5,7 +5,7 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
   const justifyClass = textAlign === 'right' ? 'justify-end' : 'justify-start';
 
   return (
-    <section className="flex flex-wrap max-h-[75vh] font-serif">
+    <section className="flex flex-wrap min-h-[400px] md:min-h-[60vh] lg:min-h-[65vh] font-serif">
       {textAlign === 'left' ? (
         <>
           {/* Left side: Text */}
@@ -20,22 +20,22 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
             )}
           </div>
           {/* Right side: Image */}
-          <div className="flex-1 min-w-[400px] p-5 max-h-[75vh]">
+          <div className="flex-1 min-w-[400px] p-5">
             <img 
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-full max-h-[65vh] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
             />
           </div>
         </>
       ) : (
         <>
           {/* Left side: Image */}
-          <div className="flex-1 min-w-[400px] p-5 max-h-[75vh]">
+          <div className="flex-1 min-w-[400px] p-5">
             <img 
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-full max-h-[65vh] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
             />
           </div>
           {/* Right side: Text */}
