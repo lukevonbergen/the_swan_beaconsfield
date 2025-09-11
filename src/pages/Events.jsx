@@ -11,7 +11,7 @@ const Events = () => {
       date: "Every Friday",
       time: "8:00 PM - 11:00 PM",
       description: "Experience live music performances from talented local artists every Friday night. From acoustic sets to full bands, enjoy an evening of great music, drinks, and atmosphere.",
-      imageSrc: "/images/01a1bcb1-9a0c-417a-aaed-75197c7464fb.JPG",
+      imageSrc: "/images/The_Swan_LiveMusic_1.JPG",
       isRecurring: true
     },
     {
@@ -19,7 +19,7 @@ const Events = () => {
       date: "Every Saturday",
       time: "8:00 PM - 11:00 PM",
       description: "Saturday nights come alive with our regular live music sessions. Dance, sing along, or simply relax with friends while enjoying performances from diverse musical genres.",
-      imageSrc: "/images/67ba6849-12ec-465b-a5c8-6150bf1062c5.JPG",
+      imageSrc: "/images/The_Swan_LiveMusic_2.JPG",
       isRecurring: true
     },
     {
