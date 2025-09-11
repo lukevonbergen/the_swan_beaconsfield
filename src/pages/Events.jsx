@@ -29,43 +29,6 @@ const Events = () => {
       description: "Join us for our exciting Monday Food Theme Nights! Each week features a different culinary adventure - from Italian classics to Asian fusion, BBQ nights to vegetarian feasts. Check our weekly menu for the current theme.",
       imageSrc: "/images/af0e0fa9-f763-448f-ab33-7ef773394ba1.JPG",
       isRecurring: true
-    },
-    {
-      title: "Live Jazz Sessions",
-      date: "First Friday of Every Month",
-      time: "7:30 PM - 10:30 PM",
-      description: "Enjoy smooth jazz performances from local musicians. Create the perfect atmosphere for a romantic evening or relaxed night out with friends.",
-      imageSrc: "/images/01a1bcb1-9a0c-417a-aaed-75197c7464fb.JPG",
-      isRecurring: true
-    },
-    {
-      title: "Sunday Roast Special",
-      date: "Every Sunday",
-      time: "12:00 PM - 6:00 PM",
-      description: "Traditional British Sunday roast with all the trimmings. Choose from beef, lamb, pork, or our vegetarian nut roast. Booking recommended.",
-      imageSrc: "/images/af0e0fa9-f763-448f-ab33-7ef773394ba1.JPG",
-      isRecurring: true
-    },
-    {
-      title: "Wine Tasting Evening",
-      date: "Saturday, March 23rd",
-      time: "7:00 PM - 9:30 PM",
-      description: "Discover new favorites at our quarterly wine tasting. Our sommelier will guide you through a selection of six wines paired with artisanal cheeses.",
-      imageSrc: "/images/5a9eecfe-7dc0-4072-8ab4-b8c92db8240b.JPG"
-    },
-    {
-      title: "Burns Night Celebration",
-      date: "Friday, January 25th",
-      time: "6:30 PM - 11:00 PM",
-      description: "Join us for a traditional Burns Night supper with haggis, neeps and tatties, plus Scottish folk music and poetry readings.",
-      imageSrc: "/images/dcb2b07c-1084-44c7-99b0-ebd4d8751f40.JPG"
-    },
-    {
-      title: "Spring Beer Festival",
-      date: "April 12-14th",
-      time: "All Day",
-      description: "Three days celebrating the best of British brewing. Over 20 guest ales from local and regional breweries, plus traditional pub games.",
-      imageSrc: "/images/e86e3915-f023-4e63-bd8d-a0f9c6aac742.JPG"
     }
   ];
 
