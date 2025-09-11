@@ -8,6 +8,7 @@ const WelcomeOverlay = () => {
 
   useEffect(() => {
     let accumulatedScroll = 0;
+    let touchStartY = 0;
 
     const handleWheel = (e) => {
       if (overlayVisible) {
@@ -26,6 +27,38 @@ const WelcomeOverlay = () => {
             document.body.style.overflow = 'auto';
           }
         }
+      }
+    };
+
+    const handleTouchStart = (e) => {
+      if (overlayVisible) {
+        touchStartY = e.touches[0].clientY;
+      }
+    };
+
+    const handleTouchMove = (e) => {
+      if (overlayVisible) {
+        e.preventDefault();
+        const touchY = e.touches[0].clientY;
+        const deltaY = touchStartY - touchY; // Positive when scrolling up
+        
+        if (deltaY > 0) { // Swiping up (scrolling down)
+          accumulatedScroll += deltaY * 2; // Multiply for sensitivity
+          const maxScroll = window.innerHeight * 0.8;
+          const progress = Math.min(accumulatedScroll / maxScroll, 1);
+          
+          setScrollProgress(progress);
+          
+          if (progress >= 1) {
+            setOverlayVisible(false);
+            document.body.style.overflow = 'auto';
+            document.body.style.position = 'static';
+            document.body.style.width = 'auto';
+            document.body.style.top = 'auto';
+          }
+        }
+        
+        touchStartY = touchY; // Update for next move event
       }
     };
 
@@ -56,6 +89,8 @@ const WelcomeOverlay = () => {
     window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('scroll', handleScroll, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
     
     // Prevent body scroll completely when overlay is visible
     if (overlayVisible) {
@@ -74,6 +109,8 @@ const WelcomeOverlay = () => {
       window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
       document.body.style.overflow = 'auto';
       document.body.style.position = 'static';
       document.body.style.width = 'auto';
