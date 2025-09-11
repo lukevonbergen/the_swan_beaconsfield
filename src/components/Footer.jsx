@@ -48,10 +48,10 @@ const Footer = () => {
             <div className="space-y-1 text-sm">
               <p>
                 <a 
-                  href="tel:01494673339" 
+                  href="tel:01494312962" 
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
                 >
-                  01494 673 339
+                  01494 312962
                 </a>
               </p>
               <p>

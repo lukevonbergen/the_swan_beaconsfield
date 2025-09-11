@@ -25,8 +25,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
               <h3 className="text-xl font-normal text-brand-dark mb-4">Phone</h3>
-              <a href="tel:01494673339" className="text-brand-gray hover:text-brand-dark transition-colors">
-                01494 673 339
+              <a href="tel:01494312962" className="text-brand-gray hover:text-brand-dark transition-colors">
+                01494 312962
               </a>
             </div>
             

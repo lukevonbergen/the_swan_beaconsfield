@@ -30,8 +30,8 @@ const Book = () => {
             <p className="text-lg text-brand-gray mb-6">
               Call us to reserve your table today
             </p>
-            <a href="tel:01494673339" className="nav-link text-xl font-bold">
-              01494 673 339
+            <a href="tel:01494312962" className="nav-link text-xl font-bold">
+              01494 312962
             </a>
             <div className="mt-6 text-sm text-brand-gray">
               <p>Available during opening hours:</p>

@@ -156,8 +156,8 @@ const WelcomeOverlay = () => {
             Book a Table
           </Link>
           <span className="hidden sm:inline text-brand-gray">•</span>
-          <a href="tel:01494673339" className="nav-link text-xl font-bold">
-            01494 673 339
+          <a href="tel:01494312962" className="nav-link text-xl font-bold">
+            01494 312962
           </a>
           <span className="hidden sm:inline text-brand-gray">•</span>
           <a href="mailto:info@theswanbeaconsfield.co.uk" className="nav-link text-xl font-bold">
