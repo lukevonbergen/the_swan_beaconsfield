@@ -12,11 +12,11 @@ const Footer = () => {
           <ul className="space-y-1">
             <li className="flex justify-between py-1 border-b border-gray-100 text-sm">
               <span className="text-brand-dark">Monday to Thursday</span>
-              <span className="text-brand-gray">12pm – 10pm</span>
+              <span className="text-brand-gray">12pm – 11pm</span>
             </li>
             <li className="flex justify-between py-1 border-b border-gray-100 text-sm">
               <span className="text-brand-dark">Friday & Saturday</span>
-              <span className="text-brand-gray">12pm – 1am</span>
+              <span className="text-brand-gray">12pm – Midnight</span>
             </li>
             <li className="flex justify-between py-1 text-sm">
               <span className="text-brand-dark">Sunday</span>

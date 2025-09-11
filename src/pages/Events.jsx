@@ -7,11 +7,27 @@ import { Link } from 'react-router-dom';
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Quiz Night",
-      date: "Every Tuesday",
-      time: "8:00 PM",
-      description: "Test your knowledge in our weekly quiz night! Teams of up to 6 people compete for pub vouchers and bragging rights. Topics range from general knowledge to local history.",
-      imageSrc: "/images/747330b2-c342-47b8-9839-f7db34cfcd89.JPG",
+      title: "Live Music Friday",
+      date: "Every Friday",
+      time: "8:00 PM - 11:00 PM",
+      description: "Experience live music performances from talented local artists every Friday night. From acoustic sets to full bands, enjoy an evening of great music, drinks, and atmosphere.",
+      imageSrc: "/images/01a1bcb1-9a0c-417a-aaed-75197c7464fb.JPG",
+      isRecurring: true
+    },
+    {
+      title: "Live Music Saturday",
+      date: "Every Saturday",
+      time: "8:00 PM - 11:00 PM",
+      description: "Saturday nights come alive with our regular live music sessions. Dance, sing along, or simply relax with friends while enjoying performances from diverse musical genres.",
+      imageSrc: "/images/67ba6849-12ec-465b-a5c8-6150bf1062c5.JPG",
+      isRecurring: true
+    },
+    {
+      title: "Food Theme Nights",
+      date: "Every Monday",
+      time: "6:00 PM - 9:00 PM",
+      description: "Join us for our exciting Monday Food Theme Nights! Each week features a different culinary adventure - from Italian classics to Asian fusion, BBQ nights to vegetarian feasts. Check our weekly menu for the current theme.",
+      imageSrc: "/images/af0e0fa9-f763-448f-ab33-7ef773394ba1.JPG",
       isRecurring: true
     },
     {
@@ -76,7 +92,7 @@ const Events = () => {
     <main className="pt-20">
       <PageHero 
         title="Events at The Old Swan"
-        subtitle="From weekly quiz nights to special celebrations, there's always something happening at The Old Swan. Join our community for memorable evenings of entertainment, great food, and good company."
+        subtitle="From live music nights to themed food experiences and special celebrations, there's always something happening at The Old Swan. Join our community for memorable evenings of entertainment, great food, and good company."
         imageSrc="/images/5869f0ff-535d-4eae-8e37-33ca9c9e25fa.JPG"
         imageAlt="Events and gatherings at The Old Swan"
         textAlign="left"
