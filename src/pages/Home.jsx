@@ -71,7 +71,7 @@ const Home = () => {
       {/* Features Section */}
       <SectionContainer>
         <h2 className="text-3xl md:text-4xl font-normal mb-12 text-brand-dark text-center">
-          Why Choose The Old Swan Beaconsfield
+          What Makes Us Special
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (

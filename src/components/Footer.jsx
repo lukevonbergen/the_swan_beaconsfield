@@ -64,12 +64,22 @@ const Footer = () => {
               </p>
               <p>
                 <a 
-                  href="https://instagram.com/swanbeaconsfield" 
+                  href="https://instagram.com/theoldswanbeaconsfield" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
                 >
-                  @swanbeaconsfield
+                  @theoldswanbeaconsfield
+                </a>
+              </p>
+              <p>
+                <a 
+                  href="https://facebook.com/theoldswanbeaconsfield" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
+                >
+                  @theoldswanbeaconsfield
                 </a>
               </p>
             </div>

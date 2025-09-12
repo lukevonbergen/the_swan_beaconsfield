@@ -25,9 +25,9 @@ const Events = () => {
     },
     {
       title: "Food Theme Nights",
-      date: "See social media for dates",
+      date: "Keep an eye on social media and website for dates",
       time: "6:00 PM - 9:00 PM",
-      description: "Join us for our exciting Monday Food Theme Nights! Each week features a different culinary delight. From chilli nights to seafood platters, steak nights to mexican feasts. Check our weekly menu for the current theme.",
+      description: "Join us for our exciting Food Theme Nights! Each event features a different culinary delight. From chilli nights to seafood platters, steak nights to mexican feasts. Check our weekly menu for the current theme.",
       imageSrc: "/images/af0e0fa9-f763-448f-ab33-7ef773394ba1.JPG",
       isRecurring: true
     }
