@@ -48,19 +48,19 @@ const Contact = () => {
             </div>
             
             <div className="text-center">
-              <h3 className="text-xl font-normal text-brand-dark mb-4">Email</h3>
-              <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
-                info@theoldswanbeaconsfield.co.uk
-              </a>
-            </div>
-            
-            <div className="text-center">
               <h3 className="text-xl font-normal text-brand-dark mb-4">Visit The Old Swan Beaconsfield</h3>
               <p className="text-brand-gray">
                 60 London End<br/>
                 Beaconsfield, HP9 2JD<br/>
                 <small className="text-sm">Traditional British Pub in the heart of Beaconsfield</small>
               </p>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-xl font-normal text-brand-dark mb-4">Email</h3>
+              <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
+                info@theoldswanbeaconsfield.co.uk
+              </a>
             </div>
           </div>
         </div>
