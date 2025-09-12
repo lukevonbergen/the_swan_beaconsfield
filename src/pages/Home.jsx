@@ -42,7 +42,7 @@ const Home = () => {
     {
       icon: "🎵",
       title: "Live Entertainment",
-      description: "Regular quiz nights, live music sessions, and special events throughout the year."
+      description: "Live sports, live music sessions, and special events throughout the year."
     }
   ];
 
