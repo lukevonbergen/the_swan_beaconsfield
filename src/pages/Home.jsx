@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import SectionContainer from '../components/SectionContainer';
@@ -47,13 +48,30 @@ const Home = () => {
 
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>The Old Swan Beaconsfield - Traditional Pub, Food & Live Music | HP9</title>
+        <meta name="description" content="The Old Swan Beaconsfield - Award-winning traditional British pub with locally sourced food, hand-pulled ales, live music & events. Best pub Beaconsfield HP9. Book now!" />
+        <meta name="keywords" content="pub Beaconsfield, traditional pub Beaconsfield, best pub Beaconsfield, food Beaconsfield, live music Beaconsfield, British pub HP9, pubs near me, The Old Swan" />
+        <meta property="og:title" content="The Old Swan Beaconsfield - Traditional British Pub & Restaurant" />
+        <meta property="og:description" content="Experience traditional British hospitality at The Old Swan Beaconsfield. Fresh local food, craft ales, live music events. 175+ years of tradition in HP9." />
+        <meta property="og:type" content="restaurant" />
+        <meta property="og:url" content="https://theoldswanbeaconsfield.co.uk" />
+        <meta name="geo.region" content="GB-BKM" />
+        <meta name="geo.placename" content="Beaconsfield" />
+        <meta name="geo.position" content="51.608;-0.643" />
+        <meta name="ICBM" content="51.608, -0.643" />
+        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk" />
+      </Helmet>
       <HeroSection />
       <AboutSection />
+      
+      {/* SEO H1 - Hidden but present for search engines */}
+      <h1 className="sr-only">The Old Swan Beaconsfield - Traditional British Pub with Live Music, Local Food & Best Ales in HP9</h1>
       
       {/* Features Section */}
       <SectionContainer>
         <h2 className="text-3xl md:text-4xl font-normal mb-12 text-brand-dark text-center">
-          Why Choose The Old Swan
+          Why Choose The Old Swan Beaconsfield
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
@@ -77,10 +95,10 @@ const Home = () => {
               Taste the Tradition
             </h2>
             <p className="text-lg text-brand-gray mb-6 leading-relaxed">
-              Our kitchen serves up classic British pub favorites alongside modern dishes, all made with locally sourced ingredients. From our famous Sunday roasts to fresh fish and chips, every meal is prepared with care and served with pride.
+              Our kitchen serves up classic British pub favourites alongside modern dishes, all made with locally sourced ingredients from Beaconsfield and surrounding areas. From our famous Sunday roasts to fresh fish and chips, every meal is prepared with care and served with pride at the best pub in Beaconsfield.
             </p>
             <p className="text-lg text-brand-gray mb-8 leading-relaxed">
-              Whether you're craving a hearty pie, fresh seafood, or something vegetarian, our seasonal menu has something for everyone.
+              Whether you're craving a hearty pie, fresh seafood, or something vegetarian, our seasonal menu has something for everyone in HP9 and beyond.
             </p>
             <Link to="/menu" className="nav-link text-xl font-bold">
               Explore Our Menu

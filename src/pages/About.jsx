@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import { Link } from 'react-router-dom';
@@ -6,26 +7,38 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>About The Old Swan - Historic Traditional Pub Beaconsfield Since 1847 | HP9</title>
+        <meta name="description" content="Discover The Old Swan's 175+ year history in Beaconsfield. Traditional British pub offering local business partnerships, community events & authentic HP9 hospitality since 1847." />
+        <meta name="keywords" content="traditional pub Beaconsfield, pub history Beaconsfield, local business Beaconsfield, community pub HP9, British pub heritage, historic pubs near me, Beaconsfield attractions" />
+        <meta property="og:title" content="About The Old Swan Beaconsfield - 175 Years of Traditional British Pub Heritage" />
+        <meta property="og:description" content="Learn about The Old Swan's rich history in Beaconsfield since 1847. A cornerstone of the HP9 community serving traditional British pub fare and hospitality." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/about" />
+      </Helmet>
       <PageHero 
         title="About The Old Swan"
-        subtitle="Discover the heart and soul of Beaconsfield's most beloved pub. With over 175 years of tradition, we combine authentic British hospitality with modern comfort."
+        subtitle="Discover the heart and soul of Beaconsfield's most beloved traditional pub. With over 175 years of heritage in HP9, we combine authentic British hospitality with modern comfort for the local community."
         imageSrc="/images/TheOldSwan_Pub.JPG"
         imageAlt="The Old Swan pub exterior in Beaconsfield"
         textAlign="right"
       />
 
+      {/* SEO H1 */}
+      <h1 className="sr-only">About The Old Swan Beaconsfield - Traditional British Pub & Local Business Since 1847 in HP9</h1>
+      
       {/* Our Story */}
       <SectionContainer>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal mb-6 text-brand-dark">
-              Our Story
+              Our Story - Traditional Pub Beaconsfield
             </h2>
             <p className="text-lg text-brand-gray mb-6 leading-relaxed">
-              Nestled in the heart of Beaconsfield, The Old Swan has been a cornerstone of the local community for over 175 years. Our traditional British pub combines the charm of yesteryear with modern comfort, offering an authentic experience that celebrates the finest of British pub culture.
+              Nestled in the heart of Beaconsfield HP9, The Old Swan has been a cornerstone of the local community and a thriving local business for over 175 years. Our traditional British pub combines the charm of yesteryear with modern comfort, offering an authentic experience that celebrates the finest of British pub culture in Beaconsfield.
             </p>
             <p className="text-lg text-brand-gray mb-6 leading-relaxed">
-              We pride ourselves on serving locally sourced ingredients, traditional ales from regional breweries, and maintaining the warm, welcoming atmosphere that has made us a beloved gathering place for generations of locals and visitors alike.
+              We pride ourselves on serving locally sourced ingredients, traditional ales from regional breweries, and maintaining the warm, welcoming atmosphere that has made us Beaconsfield's most beloved gathering place for generations of locals and visitors to HP9.
             </p>
             <p className="text-lg text-brand-gray leading-relaxed">
               Whether you're joining us for a quiet pint after work, a hearty Sunday roast with the family, or celebrating a special occasion, The Old Swan offers an experience steeped in tradition and delivered with genuine hospitality.
@@ -94,7 +107,7 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-normal text-brand-dark mb-2">Continuing Tradition</h3>
                 <p className="text-brand-gray leading-relaxed">
-                  Now in its fourth century of service, The Old Swan continues to evolve while honoring its rich heritage. 
+                  Now in its fourth century of service, The Old Swan continues to evolve while honouring its rich heritage. 
                   We remain committed to serving the finest food, drink, and hospitality to our community.
                 </p>
               </div>
@@ -117,16 +130,16 @@ const About = () => {
           </div>
           
           <div className="text-center">
-            <h3 className="text-xl font-normal text-brand-dark mb-4">Community Hub</h3>
+            <h3 className="text-xl font-normal text-brand-dark mb-4">Beaconsfield Community Hub</h3>
             <p className="text-brand-gray leading-relaxed">
-              More than just a pub, we're a gathering place where neighbors become friends and memories are made over good food and drink.
+              More than just a traditional pub, we're a local business and gathering place where Beaconsfield neighbors become friends and memories are made over good food and drink in HP9.
             </p>
           </div>
           
           <div className="text-center">
-            <h3 className="text-xl font-normal text-brand-dark mb-4">Local Sourcing</h3>
+            <h3 className="text-xl font-normal text-brand-dark mb-4">Local Beaconsfield Sourcing</h3>
             <p className="text-brand-gray leading-relaxed">
-              Our kitchen works with local farmers and suppliers to bring you the freshest ingredients and support our community.
+              Our kitchen works with local farmers and suppliers throughout Beaconsfield and the surrounding HP9 area to bring you the freshest ingredients and support our community.
             </p>
           </div>
         </div>

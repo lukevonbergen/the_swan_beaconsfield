@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
@@ -94,7 +95,7 @@ const Menu = () => {
     },
     {
       name: "Nachos",
-      description: "Tortilla chips, melted cheese, salsa, sour cream and guacamole",
+      description: "Tortilla crisps, melted cheese, salsa, sour cream and guacamole",
       price: "10.00",
       isVegetarian: true
     },
@@ -208,19 +209,31 @@ const Menu = () => {
 
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>Menu - Food Beaconsfield | Traditional British Pub Food & Sunday Roasts | The Old Swan HP9</title>
+        <meta name="description" content="Delicious traditional British pub food at The Old Swan Beaconsfield. Fresh local ingredients, Sunday roasts, fish & chips, steaks. Best food in Beaconsfield HP9. Book your table!" />
+        <meta name="keywords" content="food Beaconsfield, pub food Beaconsfield, Sunday roast Beaconsfield, fish and chips HP9, steak Beaconsfield, British food near me, restaurant Beaconsfield, dining HP9" />
+        <meta property="og:title" content="Traditional British Pub Food Menu - The Old Swan Beaconsfield" />
+        <meta property="og:description" content="Discover our seasonal menu featuring classic British pub favorites, fresh local ingredients, and exceptional Sunday roasts in the heart of Beaconsfield." />
+        <meta property="og:type" content="restaurant.menu" />
+        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/menu" />
+      </Helmet>
       <PageHero 
-        title="Our Menu"
-        subtitle="Discover our selection of traditional British pub classics, made with locally sourced ingredients and served with pride. From hearty mains to indulgent desserts, we have something for everyone."
+        title="Our Menu - Food Beaconsfield"
+        subtitle="Discover our selection of traditional British pub classics in Beaconsfield, made with locally sourced ingredients and served with pride. From hearty mains to indulgent desserts, we have exceptional food for everyone in HP9."
         imageSrc="/images/93e1019d-ce9b-4ab5-8d44-c90792c3bbcb.JPG"
         imageAlt="Delicious food at The Old Swan"
         textAlign="left"
       />
 
+      {/* SEO H1 */}
+      <h1 className="sr-only">Traditional British Pub Food Menu Beaconsfield - Fresh Local Ingredients, Sunday Roasts & Classic Dishes at The Old Swan HP9</h1>
+      
       {/* Menu Note */}
       <SectionContainer background="gray">
         <div className="text-center mb-8">
           <p className="text-lg text-brand-gray leading-relaxed max-w-3xl mx-auto">
-            All our dishes are prepared fresh daily using locally sourced ingredients where possible. 
+            All our delicious food dishes are prepared fresh daily at our Beaconsfield kitchen using locally sourced ingredients from HP9 suppliers where possible. 
             Please inform our staff of any allergies or dietary requirements.
           </p>
           <div className="flex justify-center gap-6 mt-6 text-sm">
@@ -318,10 +331,10 @@ const Menu = () => {
       <SectionContainer background="gray">
         <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-normal mb-4 text-brand-dark">
-            Ready to Dine with Us?
+            Ready to Dine at The Best Food in Beaconsfield?
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto">
-            Book your table today and experience the finest in traditional British pub dining.
+            Book your table today and experience the finest in traditional British pub dining and food in Beaconsfield HP9.
           </p>
           <Link to="/book" className="nav-link text-xl font-bold">
             Book a Table

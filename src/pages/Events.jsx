@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import EventCard from '../components/EventCard';
@@ -7,18 +8,18 @@ import { Link } from 'react-router-dom';
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Live Music Friday",
+      title: "Live Music Friday Beaconsfield",
       date: "Every Friday",
       time: "9:30 PM - Midnight",
-      description: "Experience live music performances from talented local artists every Friday night. From acoustic sets to full bands, enjoy an evening of great music, drinks, and atmosphere.",
+      description: "Experience live music performances from talented local artists every Friday night in Beaconsfield. From acoustic sets to full bands, enjoy an evening of great music, drinks, and atmosphere at the best live music venue in HP9.",
       imageSrc: "/images/The_Swan_LiveMusic_1.JPG",
       isRecurring: true
     },
     {
-      title: "Live Music Saturday",
+      title: "Live Music Saturday Beaconsfield",
       date: "Every Saturday",
       time: "9:30 PM - Midnight",
-      description: "Saturday nights come alive with our regular live music sessions. Dance, sing along, or simply relax with friends while enjoying performances from diverse musical genres.",
+      description: "Saturday nights come alive with our regular live music Beaconsfield sessions. Dance, sing along, or simply relax with friends while enjoying performances from diverse musical genres at HP9's premier live music pub.",
       imageSrc: "/images/The_Swan_LiveMusic_2.JPG",
       isRecurring: true
     },
@@ -57,18 +58,30 @@ const Events = () => {
 
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>Events & Live Music Beaconsfield - Friday & Saturday Nights | The Old Swan HP9</title>
+        <meta name="description" content="Live music Beaconsfield every Friday & Saturday at The Old Swan. Local bands, acoustic nights, food theme nights & private events. Best entertainment in HP9!" />
+        <meta name="keywords" content="live music Beaconsfield, events Beaconsfield, music nights HP9, entertainment Beaconsfield, acoustic music near me, local bands Beaconsfield, private events HP9, weekend entertainment" />
+        <meta property="og:title" content="Live Music & Events at The Old Swan Beaconsfield - Every Weekend" />
+        <meta property="og:description" content="Join us for live music every Friday & Saturday night in Beaconsfield. Local bands, themed food nights, and private events at The Old Swan HP9." />
+        <meta property="og:type" content="events" />
+        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/events" />
+      </Helmet>
       <PageHero 
-        title="Events at The Old Swan"
-        subtitle="From live music nights to themed food experiences and special celebrations, there's always something happening at The Old Swan. Join our community for memorable evenings of entertainment, great food, and good company."
+        title="Live Music & Events Beaconsfield"
+        subtitle="From live music Beaconsfield nights to themed food experiences and special celebrations, there's always something happening at The Old Swan HP9. Join our community for memorable evenings of entertainment, great food, and good company."
         imageSrc="/images/5869f0ff-535d-4eae-8e37-33ca9c9e25fa.JPG"
         imageAlt="Events and gatherings at The Old Swan"
         textAlign="left"
       />
 
+      {/* SEO H1 */}
+      <h1 className="sr-only">Live Music Beaconsfield & Events at The Old Swan HP9 - Friday & Saturday Night Entertainment, Local Bands & Private Functions</h1>
+      
       {/* Upcoming Events */}
       <SectionContainer>
         <h2 className="text-3xl md:text-4xl font-normal mb-12 text-brand-dark text-center">
-          Upcoming Events
+          Live Music Beaconsfield & Upcoming Events
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {upcomingEvents.map((event, index) => (
@@ -82,10 +95,10 @@ const Events = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-normal mb-6 text-brand-dark">
-              Private Events
+              Private Events Beaconsfield
             </h2>
             <p className="text-lg text-brand-gray mb-8 leading-relaxed">
-              The Old Swan is the perfect venue for your special occasions. Our experienced events team will work with you to create memorable celebrations that your guests will talk about for years to come.
+              The Old Swan is the perfect venue for your special occasions in Beaconsfield and HP9. Our experienced events team will work with you to create memorable celebrations and private events that your guests will talk about for years to come.
             </p>
             <div className="space-y-6">
               {privateEvents.map((event, index) => (
