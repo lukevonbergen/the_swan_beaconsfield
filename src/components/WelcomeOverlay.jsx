@@ -160,7 +160,7 @@ const WelcomeOverlay = () => {
             01494 312962
           </a>
           <span className="hidden sm:inline text-brand-gray">•</span>
-          <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="nav-link text-xl font-bold">
+          <a href="mailto:beaconsfield@tosbars.co.uk" className="nav-link text-xl font-bold">
             Email Us
           </a>
         </div>

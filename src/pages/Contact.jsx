@@ -8,7 +8,7 @@ const Contact = () => {
     <main className="pt-20">
       <Helmet>
         <title>Contact The Old Swan Beaconsfield | 60 London End, HP9 2JD | Phone & Directions</title>
-        <meta name="description" content="Contact The Old Swan traditional pub Beaconsfield. Located at 60 London End, HP9 2JD. Phone 01494 312962. Email info@theoldswanbeaconsfield.co.uk. Find us near you!" />
+        <meta name="description" content="Contact The Old Swan traditional pub Beaconsfield. Located at 60 London End, HP9 2JD. Phone 01494 312962. Email beaconsfield@tosbars.co.uk. Find us near you!" />
         <meta name="keywords" content="contact Beaconsfield pub, The Old Swan address, 60 London End HP9, phone Beaconsfield pub, pub near me HP9, Beaconsfield pub location, contact traditional pub" />
         <meta property="og:title" content="Contact The Old Swan Beaconsfield - Location, Phone & Directions" />
         <meta property="og:description" content="Get in touch with The Old Swan Beaconsfield. Visit us at 60 London End, HP9 2JD or call 01494 312962 for bookings and enquiries." />
@@ -58,8 +58,8 @@ const Contact = () => {
             
             <div className="text-center">
               <h3 className="text-xl font-normal text-brand-dark mb-4">Email</h3>
-              <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
-                info@theoldswanbeaconsfield.co.uk
+              <a href="mailto:beaconsfield@tosbars.co.uk" className="text-brand-gray hover:text-brand-dark transition-colors">
+                beaconsfield@tosbars.co.uk
               </a>
             </div>
           </div>

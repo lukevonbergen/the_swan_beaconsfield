@@ -56,10 +56,10 @@ const Footer = () => {
               </p>
               <p>
                 <a 
-                  href="mailto:info@theoldswanbeaconsfield.co.uk" 
+                  href="mailto:beaconsfield@tosbars.co.uk" 
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
                 >
-                  info@theoldswanbeaconsfield.co.uk
+                  beaconsfield@tosbars.co.uk
                 </a>
               </p>
               <div className="flex items-center gap-4">
