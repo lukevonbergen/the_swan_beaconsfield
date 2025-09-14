@@ -35,9 +35,9 @@ const Book = () => {
             </a>
             <div className="mt-6 text-sm text-brand-gray">
               <p>Available during opening hours:</p>
-              <p>Monday-Thursday: 12:00pm - 11:00pm</p>
-              <p>Friday-Saturday: 12:00pm - 12:00am</p>
-              <p>Sunday: 12:00pm - 10:30pm</p>
+              <p>Monday to Thursday: 12pm – 11pm</p>
+              <p>Friday & Saturday: 12pm – Midnight</p>
+              <p>Sunday: 12pm – 9pm</p>
             </div>
           </div>
         </div>
