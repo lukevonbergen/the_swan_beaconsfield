@@ -24,7 +24,7 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
             <img 
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-contain rounded-lg"
             />
           </div>
         </>
@@ -35,7 +35,7 @@ const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) =
             <img 
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-contain rounded-lg"
             />
           </div>
           {/* Right side: Text */}
