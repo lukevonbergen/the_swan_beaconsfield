@@ -16,11 +16,10 @@ const Book = () => {
       <SectionContainer>
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-normal mb-8 text-brand-dark">
-            ResDiary Integration Coming Soon
+            Reserve Your Table
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-            We're currently setting up our online booking system through ResDiary to make reserving your table even easier. 
-            In the meantime, please call us directly to book your table.
+            Call us directly to book your table and we'll ensure you have the perfect dining experience.
           </p>
           
           <div className="bg-gray-50 p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
