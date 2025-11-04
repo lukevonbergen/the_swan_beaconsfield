@@ -24,9 +24,10 @@ const ChristmasBanner = () => {
       </div>
 
       {/* Banner content */}
-      <div className="relative z-10 py-3 px-4 text-center">
-        <p className="text-white font-serif text-lg md:text-xl font-semibold tracking-wide">
-          🎄 Celebrate Christmas at The Old Swan • View Our Festive Menu & Book Your Table 🎄
+      <div className="relative z-10 py-2 px-3 md:py-3 md:px-4 text-center">
+        <p className="text-white font-serif text-sm md:text-lg lg:text-xl font-semibold tracking-wide flex flex-col md:block items-center">
+          <span>🎄 Celebrate Christmas at The Old Swan •{' '}</span>
+          <span>View Our Festive Menu & Book Your Table 🎄</span>
         </p>
       </div>
 
