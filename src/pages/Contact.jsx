@@ -5,7 +5,7 @@ import SectionContainer from '../components/SectionContainer';
 
 const Contact = () => {
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <Helmet>
         <title>Contact The Old Swan Beaconsfield | 60 London End, HP9 2JD | Phone & Directions</title>
         <meta name="description" content="Contact The Old Swan traditional pub Beaconsfield. Located at 60 London End, HP9 2JD. Phone 01494 312962. Email beaconsfield@tosbars.co.uk. Find us near you!" />

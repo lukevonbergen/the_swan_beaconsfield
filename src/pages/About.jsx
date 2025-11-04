@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <Helmet>
         <title>About The Old Swan - Historic Traditional Pub Beaconsfield Since 1847 | HP9</title>
         <meta name="description" content="Discover The Old Swan's 175+ year history in Beaconsfield. Traditional British pub offering local business partnerships, community events & authentic HP9 hospitality since 1847." />
@@ -45,8 +45,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <img 
-              src="/images/67747257-6c24-4c47-a0b0-6fe9d1b313d2.JPG" 
+            <img
+              src="/images/oct_25/indoor-tables.jpg"
               alt="The Old Swan interior atmosphere"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             />

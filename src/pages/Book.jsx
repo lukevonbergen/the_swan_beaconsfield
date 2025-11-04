@@ -4,7 +4,7 @@ import SectionContainer from '../components/SectionContainer';
 
 const Book = () => {
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <PageHero 
         title="Book a Table"
         subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Old Swan is truly memorable."

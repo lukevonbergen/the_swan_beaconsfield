@@ -47,7 +47,7 @@ const Home = () => {
   ];
 
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <Helmet>
         <title>The Old Swan Beaconsfield - Traditional Pub, Food & Live Music | HP9</title>
         <meta name="description" content="The Old Swan Beaconsfield - Award-winning traditional British pub with locally sourced food, hand-pulled ales, live music & events. Best pub Beaconsfield HP9. Book now!" />

@@ -208,7 +208,7 @@ const Menu = () => {
   ];
 
   return (
-    <main className="pt-20">
+    <main className="pt-32">
       <Helmet>
         <title>Menu - Food Beaconsfield | Traditional British Pub Food & Sunday Roasts | The Old Swan HP9</title>
         <meta name="description" content="Delicious traditional British pub food at The Old Swan Beaconsfield. Fresh local ingredients, Sunday roasts, fish & chips, steaks. Best food in Beaconsfield HP9. Book your table!" />
@@ -218,10 +218,10 @@ const Menu = () => {
         <meta property="og:type" content="restaurant.menu" />
         <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/menu" />
       </Helmet>
-      <PageHero 
+      <PageHero
         title="Our Menu - Food Beaconsfield"
         subtitle="Discover our selection of traditional British pub classics in Beaconsfield, made with locally sourced ingredients and served with pride. From hearty mains to indulgent desserts, we have exceptional food for everyone in HP9."
-        imageSrc="/images/93e1019d-ce9b-4ab5-8d44-c90792c3bbcb.JPG"
+        imageSrc="/images/oct_25/food-burger.png"
         imageAlt="Delicious food at The Old Swan"
         textAlign="left"
       />
@@ -255,7 +255,7 @@ const Menu = () => {
 
       {/* Starters */}
       <SectionContainer>
-        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Starters
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -267,7 +267,7 @@ const Menu = () => {
 
       {/* Main Courses */}
       <SectionContainer background="gray">
-        <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Main Courses
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -279,7 +279,7 @@ const Menu = () => {
 
       {/* Sharing & Snacks */}
       <SectionContainer>
-        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Sharing & Snacks
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -293,7 +293,7 @@ const Menu = () => {
       <SectionContainer background="gray">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+            <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
               Desserts
             </h2>
             <div>
@@ -303,7 +303,7 @@ const Menu = () => {
             </div>
           </div>
           <div>
-            <h2 className="sticky top-20 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+            <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
               Sides
             </h2>
             <div>
@@ -317,7 +317,7 @@ const Menu = () => {
 
       {/* Kids Menu */}
       <SectionContainer>
-        <h2 className="sticky top-20 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Under 12's <span className="text-lg">(All with rustic fries)</span>
         </h2>
         <div className="max-w-4xl mx-auto">

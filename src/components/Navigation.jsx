@@ -18,7 +18,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white shadow-md z-50 font-serif">
+    <header className="fixed top-[52px] w-full bg-white shadow-md z-50 font-serif">
       <nav className="flex justify-between items-center h-20 px-10 md:px-16">
         {/* Logo */}
         <div className="logo flex items-center">
