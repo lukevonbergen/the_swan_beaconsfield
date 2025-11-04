@@ -2,55 +2,33 @@ import React from 'react';
 
 const PageHero = ({ title, subtitle, imageSrc, imageAlt, textAlign = 'left' }) => {
   const textAlignClass = textAlign === 'right' ? 'text-right' : 'text-left';
-  const justifyClass = textAlign === 'right' ? 'justify-end' : 'justify-start';
+  const alignItemsClass = textAlign === 'right' ? 'items-end' : 'items-start';
 
   return (
-    <section className="flex flex-wrap min-h-[400px] md:min-h-[60vh] lg:min-h-[65vh] font-serif">
-      {textAlign === 'left' ? (
-        <>
-          {/* Left side: Text */}
-          <div className={`flex-1 min-w-[400px] flex flex-col justify-center p-8 md:p-16 ${textAlignClass}`}>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-brand-dark leading-tight">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className={`text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl ${textAlign === 'right' ? 'ml-auto' : ''}`}>
-                {subtitle}
-              </p>
-            )}
-          </div>
-          {/* Right side: Image */}
-          <div className="flex-1 min-w-[400px] p-5">
-            <img 
-              src={imageSrc}
-              alt={imageAlt}
-              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
-            />
-          </div>
-        </>
-      ) : (
-        <>
-          {/* Left side: Image */}
-          <div className="flex-1 min-w-[400px] p-5">
-            <img 
-              src={imageSrc}
-              alt={imageAlt}
-              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg"
-            />
-          </div>
-          {/* Right side: Text */}
-          <div className={`flex-1 min-w-[400px] flex flex-col justify-center p-8 md:p-16 ${textAlignClass}`}>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-brand-dark leading-tight">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className={`text-lg md:text-xl text-brand-gray leading-relaxed max-w-2xl ${textAlign === 'right' ? 'ml-auto' : ''}`}>
-                {subtitle}
-              </p>
-            )}
-          </div>
-        </>
-      )}
+    <section className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] font-serif">
+      {/* Full width background image */}
+      <div className="absolute inset-0">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
+      </div>
+
+      {/* Text overlay */}
+      <div className={`relative z-10 flex flex-col justify-center ${alignItemsClass} h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] p-8 md:p-16 ${textAlignClass}`}>
+        <div className="max-w-3xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-white leading-tight drop-shadow-lg">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg">
+              {subtitle}
+            </p>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

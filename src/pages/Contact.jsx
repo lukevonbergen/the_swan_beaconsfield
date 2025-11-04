@@ -19,12 +19,12 @@ const Contact = () => {
         <meta name="ICBM" content="51.608, -0.643" />
         <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/contact" />
       </Helmet>
-      <PageHero 
+      <PageHero
         title="Contact The Old Swan Beaconsfield"
         subtitle="Get in touch with us at 60 London End, HP9 2JD - we'd love to hear from you. Whether you have questions about our menu, want to book a table, or are planning a special event, our friendly Beaconsfield team is here to help."
-        imageSrc="/images/TheOldSwan_Pub.JPG"
+        imageSrc="/images/oct_25/beergarden-sign.jpg"
         imageAlt="The Old Swan pub exterior in Beaconsfield"
-        textAlign="right"
+        textAlign="left"
       />
 
       {/* SEO H1 */}

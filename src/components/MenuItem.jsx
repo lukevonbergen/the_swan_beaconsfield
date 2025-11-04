@@ -24,9 +24,11 @@ const MenuItem = ({ name, description, price, isVegetarian, isVegan, isGlutenFre
           {description}
         </p>
       </div>
-      <div className="text-brand-dark font-normal text-lg md:text-xl">
-        £{price}
-      </div>
+      {price && (
+        <div className="text-brand-dark font-normal text-lg md:text-xl">
+          £{price}
+        </div>
+      )}
     </div>
   );
 };

@@ -16,12 +16,12 @@ const About = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/about" />
       </Helmet>
-      <PageHero 
+      <PageHero
         title="About The Old Swan"
         subtitle="Discover the heart and soul of Beaconsfield's most beloved traditional pub. With over 175 years of heritage in HP9, we combine authentic British hospitality with modern comfort for the local community."
-        imageSrc="/images/TheOldSwan_Pub.JPG"
+        imageSrc="/images/oct_25/outdoor-signs.png"
         imageAlt="The Old Swan pub exterior in Beaconsfield"
-        textAlign="right"
+        textAlign="left"
       />
 
       {/* SEO H1 */}

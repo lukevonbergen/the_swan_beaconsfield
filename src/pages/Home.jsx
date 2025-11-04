@@ -105,8 +105,8 @@ const Home = () => {
             </Link>
           </div>
           <div>
-            <img 
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+            <img
+              src="/images/oct_25/food-nachos.jpg"
               alt="Delicious pub food spread"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             />

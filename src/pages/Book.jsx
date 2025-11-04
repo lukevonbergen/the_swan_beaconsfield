@@ -5,10 +5,10 @@ import SectionContainer from '../components/SectionContainer';
 const Book = () => {
   return (
     <main className="pt-32">
-      <PageHero 
+      <PageHero
         title="Book a Table"
         subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Old Swan is truly memorable."
-        imageSrc="/images/c3168540-03b4-459c-9523-7b4c0a4814ba.JPG"
+        imageSrc="/images/oct_25/indoor-tables-2.jpg"
         imageAlt="Dining area at The Old Swan"
         textAlign="left"
       />

@@ -67,10 +67,10 @@ const Events = () => {
         <meta property="og:type" content="events" />
         <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/events" />
       </Helmet>
-      <PageHero 
+      <PageHero
         title="Live Music & Events Beaconsfield"
         subtitle="From live music Beaconsfield nights to themed food experiences and special celebrations, there's always something happening at The Old Swan HP9. Join our community for memorable evenings of entertainment, great food, and good company."
-        imageSrc="/images/5869f0ff-535d-4eae-8e37-33ca9c9e25fa.JPG"
+        imageSrc="/images/oct_25/beer-taps.jpg"
         imageAlt="Events and gatherings at The Old Swan"
         textAlign="left"
       />

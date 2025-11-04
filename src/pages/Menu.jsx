@@ -221,7 +221,7 @@ const Menu = () => {
       <PageHero
         title="Our Menu - Food Beaconsfield"
         subtitle="Discover our selection of traditional British pub classics in Beaconsfield, made with locally sourced ingredients and served with pride. From hearty mains to indulgent desserts, we have exceptional food for everyone in HP9."
-        imageSrc="/images/oct_25/food-burger.png"
+        imageSrc="/images/oct_25/food-flatbreads.jpg"
         imageAlt="Delicious food at The Old Swan"
         textAlign="left"
       />

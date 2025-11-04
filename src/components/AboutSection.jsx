@@ -24,10 +24,10 @@ const AboutSection = () => {
       
       {/* Image */}
       <div className="flex-1 min-w-[400px] p-5">
-        <img 
-          src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-          alt="Inside the pub" 
-          className="w-full h-full min-h-[400px] object-cover rounded-lg"
+        <img
+          src="/images/oct_25/indoor-booth-area.jpg"
+          alt="Inside the pub"
+          className="w-full h-[450px] md:h-[600px] object-cover object-center rounded-lg"
         />
       </div>
     </section>
