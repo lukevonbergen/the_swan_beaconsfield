@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ChristmasBanner = () => {
   return (
     <Link
-      to="/christmas-menu"
+      to="/christmas"
       className="fixed top-0 left-0 right-0 z-[60] block w-full bg-red-700 hover:bg-red-800 transition-colors duration-300 overflow-hidden cursor-pointer"
       style={{
         background: 'linear-gradient(135deg, #991b1b 0%, #b91c1c 50%, #991b1b 100%)'

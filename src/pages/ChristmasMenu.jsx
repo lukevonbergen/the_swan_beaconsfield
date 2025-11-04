@@ -97,7 +97,7 @@ const ChristmasMenu = () => {
         <meta property="og:title" content="Christmas Menu - The Old Swan Beaconsfield" />
         <meta property="og:description" content="Join us for a traditional Christmas celebration with our special festive menu featuring all your seasonal favorites." />
         <meta property="og:type" content="restaurant.menu" />
-        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/christmas-menu" />
+        <link rel="canonical" href="https://theoldswanbeaconsfield.co.uk/christmas" />
       </Helmet>
 
       <PageHero
