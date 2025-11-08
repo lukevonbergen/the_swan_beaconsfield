@@ -63,3 +63,9 @@ body {
 .nav-link.active {
     color: #2c2c2c;
 }
+
+/* Hide TableAgent branding in iframe */
+iframe[src*="tableagent.com"] {
+    margin-bottom: -80px;
+    padding-bottom: 80px;
+}
