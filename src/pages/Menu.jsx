@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
-import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const starters = [

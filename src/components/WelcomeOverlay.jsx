@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const WelcomeOverlay = () => {
   const [overlayVisible, setOverlayVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [scrollAttempted, setScrollAttempted] = useState(false);
 
   useEffect(() => {
     let accumulatedScroll = 0;
