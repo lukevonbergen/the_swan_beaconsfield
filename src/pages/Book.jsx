@@ -19,9 +19,20 @@ const Book = () => {
             Reserve Your Table
           </h2>
           <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-            Call us directly to book your table and we'll ensure you have the perfect dining experience.
+            Book your table instantly using our online reservation system below, or give us a call.
           </p>
-          
+
+          <div className="w-full max-w-4xl mx-auto mb-12" style={{ minHeight: '736px' }}>
+            <iframe
+              src="https://tableagent.com/iframe/the-old-swan/"
+              style={{ border: '0px none', minWidth: '375px', minHeight: '736px' }}
+              sandbox="allow-forms allow-modals allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              width="100%"
+              height="100%"
+              title="Book a table at The Old Swan"
+            />
+          </div>
+
           <div className="bg-gray-50 p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
             <h3 className="text-2xl font-normal text-brand-dark mb-4">
               Book by Phone

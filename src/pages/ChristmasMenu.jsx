@@ -175,25 +175,46 @@ const ChristmasMenu = () => {
         </div>
       </SectionContainer>
 
-      {/* Booking CTA */}
+      {/* Booking Section */}
       <SectionContainer background="gray">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-normal mb-6 text-brand-dark">
-            Ready to Book Your Christmas Celebration?
+            Book Your Christmas Table
           </h2>
-          <p className="text-lg text-brand-gray mb-8">
-            Don't miss out on the festive season at The Old Swan. Tables fill up quickly!
+          <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
+            Don't miss out on the festive season at The Old Swan. Book your table instantly using our online reservation system below, or give us a call.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <Link to="/book" className="nav-link text-xl font-bold">
-              Book Your Christmas Table
-            </Link>
-            <span className="hidden sm:inline text-brand-gray">•</span>
-            <Link to="/contact" className="nav-link text-xl font-bold">
-              Contact Us
-            </Link>
+
+          <div className="w-full max-w-4xl mx-auto mb-12" style={{ minHeight: '736px' }}>
+            <iframe
+              src="https://tableagent.com/iframe/the-old-swan/"
+              style={{ border: '0px none', minWidth: '375px', minHeight: '736px' }}
+              sandbox="allow-forms allow-modals allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              width="100%"
+              height="100%"
+              title="Book a table at The Old Swan"
+            />
           </div>
-          <div className="border-t border-gray-300 pt-8 mt-8">
+
+          <div className="bg-white p-8 md:p-12 rounded-lg max-w-2xl mx-auto mb-8">
+            <h3 className="text-2xl font-normal text-brand-dark mb-4">
+              Book by Phone
+            </h3>
+            <p className="text-lg text-brand-gray mb-6">
+              Call us to reserve your Christmas table today
+            </p>
+            <a href="tel:01494312962" className="nav-link text-xl font-bold">
+              01494 312962
+            </a>
+            <div className="mt-6 text-sm text-brand-gray">
+              <p>Available during opening hours:</p>
+              <p>Monday to Thursday: 12pm – 11pm</p>
+              <p>Friday & Saturday: 12pm – Midnight</p>
+              <p>Sunday: 12pm – 9pm</p>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-300 pt-8 mt-8 max-w-3xl mx-auto">
             <h3 className="text-xl font-normal mb-4 text-brand-dark">
               Looking for Our Regular Menu?
             </h3>

@@ -327,18 +327,44 @@ const Menu = () => {
         </div>
       </SectionContainer>
 
-      {/* CTA Section */}
+      {/* Booking Section */}
       <SectionContainer background="gray">
         <div className="text-center">
-          <h2 className="text-2xl md:text-3xl font-normal mb-4 text-brand-dark">
-            Ready to Dine at The Best Food in Beaconsfield?
+          <h2 className="text-3xl md:text-4xl font-normal mb-6 text-brand-dark">
+            Book Your Table
           </h2>
-          <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto">
-            Book your table today and experience the finest in traditional British pub dining and food in Beaconsfield HP9.
+          <p className="text-lg text-brand-gray mb-8 max-w-2xl mx-auto leading-relaxed">
+            Book your table instantly using our online reservation system below, or give us a call.
           </p>
-          <Link to="/book" className="nav-link text-xl font-bold">
-            Book a Table
-          </Link>
+
+          <div className="w-full max-w-4xl mx-auto mb-12" style={{ minHeight: '736px' }}>
+            <iframe
+              src="https://tableagent.com/iframe/the-old-swan/"
+              style={{ border: '0px none', minWidth: '375px', minHeight: '736px' }}
+              sandbox="allow-forms allow-modals allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              width="100%"
+              height="100%"
+              title="Book a table at The Old Swan"
+            />
+          </div>
+
+          <div className="bg-white p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-normal text-brand-dark mb-4">
+              Book by Phone
+            </h3>
+            <p className="text-lg text-brand-gray mb-6">
+              Call us to reserve your table today
+            </p>
+            <a href="tel:01494312962" className="nav-link text-xl font-bold">
+              01494 312962
+            </a>
+            <div className="mt-6 text-sm text-brand-gray">
+              <p>Available during opening hours:</p>
+              <p>Monday to Thursday: 12pm – 11pm</p>
+              <p>Friday & Saturday: 12pm – Midnight</p>
+              <p>Sunday: 12pm – 9pm</p>
+            </div>
+          </div>
         </div>
       </SectionContainer>
     </main>
