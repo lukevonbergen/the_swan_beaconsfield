@@ -5,27 +5,46 @@ import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
 
 const Menu = () => {
+  const whileYouWait = [
+    {
+      name: "Scampi",
+      description: "",
+      price: "5.00"
+    },
+    {
+      name: "Bread & Oil",
+      description: "",
+      price: "5.00",
+      isVegetarian: true
+    },
+    {
+      name: "Olives",
+      description: "",
+      price: "4.00",
+      isVegetarian: true
+    }
+  ];
+
   const starters = [
     {
       name: "Garlic and Herb King Prawns",
-      description: "Served with freshly baked soda bread",
+      description: "Served with freshly baked rustic bread",
       price: "10.00"
     },
     {
-      name: "Classic Tomato and Basil Bruschetta",
-      description: "Fresh tomatoes and basil on toasted bread",
+      name: "Wild Mushroom Arancini",
+      description: "With truffle mayo and parmesan",
       price: "8.00",
       isVegetarian: true
     },
     {
-      name: "Parmesan Crumbed Mushrooms",
-      description: "With tartar sauce",
-      price: "8.00",
-      isVegetarian: true
+      name: "Bubble & Squeak",
+      description: "Hollandaise, smoked bacon, poached egg",
+      price: "8.00/15.00"
     },
     {
       name: "Sausage Rolls",
-      description: "With wholegrain mustard mayo",
+      description: "With gravy",
       price: "7.50"
     },
     {
@@ -50,7 +69,7 @@ const Menu = () => {
     },
     {
       name: "King Prawn, Chilli & Herb Linguini",
-      description: "With roasted garlic, cherry tomatoes and basil sauce",
+      description: "With roasted garlic, cherry tomatoes and herb sauce",
       price: "16.00"
     },
     {
@@ -60,22 +79,22 @@ const Menu = () => {
     },
     {
       name: "10oz Sirloin Steak",
-      description: "Vine roasted cherry tomatoes, sautéed mushrooms, onion rings, peppercorn sauce and garlic new potatoes",
+      description: "Vine roasted cherry tomatoes, sautéed mushrooms, onion rings, peppercorn sauce and rustic fries",
       price: "25.00"
     },
     {
       name: "Halls of Hazelmere Sausages",
-      description: "Colcannon mash, seasonal greens, and caramelised onion gravy",
+      description: "Mash, seasonal veg, and caramelised onion gravy",
       price: "15.00"
     },
     {
-      name: "Panko Crumbed Chicken Schnitzel",
-      description: "Mushroom sauce, rustic fries and house salad",
-      price: "16.00"
+      name: "Braised Lamb Shank",
+      description: "Rosemary mash, roasted veg and red wine jus",
+      price: "22.00"
     },
     {
-      name: "Pie of the Week",
-      description: "Ask server for details - with creamy mashed potatoes and seasonal greens",
+      name: "Chicken, Leek & Mushroom Pie",
+      description: "With creamy mash potatoes and seasonal greens",
       price: "16.00"
     }
   ];
@@ -94,31 +113,19 @@ const Menu = () => {
     },
     {
       name: "Nachos",
-      description: "Tortilla crisps, melted cheese, salsa, sour cream and guacamole",
-      price: "10.00",
+      description: "Tortilla chips, melted cheese, salsa, sour cream and guacamole",
+      price: "12.00",
       isVegetarian: true
     },
     {
-      name: "Selection of Rustic Bread & Olives",
-      description: "Balsamic vinegar, olive oil and butter",
-      price: "7.00",
-      isVegetarian: true
+      name: "A Taste of the Sea",
+      description: "Selection of prawns, squid tentacles, mussels, crab & catch of the day with savoury rice, fries, house dips and lemon wedge",
+      price: "25.00"
     },
     {
-      name: "Charcuterie",
-      description: "Cured meats, olives, pickled onions & gherkins, cheese, chutney and rustic bread",
-      price: "15.00"
-    },
-    {
-      name: "Roasted Garlic & Rosemary Hummus",
-      description: "With flat bread",
-      price: "7.00",
-      isVegetarian: true
-    },
-    {
-      name: "Scampi and Tartar Sauce",
-      description: "",
-      price: "7.00"
+      name: "All the Meats",
+      description: "Selection of tender BBQ glazed pork ribs, spicy chicken wings, pigs in blankets, chicken tenders, sausage rolls, fries, onion rings & our house dips",
+      price: "22.00"
     }
   ];
 
@@ -126,7 +133,7 @@ const Menu = () => {
     {
       name: "Malva Pudding",
       description: "Traditional SA dessert",
-      price: "6.00",
+      price: "6.50",
       isVegetarian: true
     },
     {
@@ -142,8 +149,8 @@ const Menu = () => {
       isVegetarian: true
     },
     {
-      name: "Cheesecake",
-      description: "With berry compote",
+      name: "Apple Crumble",
+      description: "With custard",
       price: "7.50",
       isVegetarian: true
     },
@@ -169,7 +176,7 @@ const Menu = () => {
       isVegetarian: true
     },
     {
-      name: "Colcannon Mash",
+      name: "Roasted Carrots & Parsnips",
       description: "",
       price: "5.00",
       isVegetarian: true
@@ -191,18 +198,18 @@ const Menu = () => {
   const kidsMenu = [
     {
       name: "Chicken Tenders",
-      description: "All with rustic fries",
-      price: "6.50"
+      description: "Southern fried",
+      price: "7.00"
     },
     {
-      name: "Hot Dog",
-      description: "All with rustic fries",
+      name: "Fish Goujons",
+      description: "",
       price: "7.00"
     },
     {
       name: "Kids Burger",
-      description: "All with rustic fries",
-      price: "6.50"
+      description: "",
+      price: "7.00"
     }
   ];
 
@@ -252,9 +259,21 @@ const Menu = () => {
         </div>
       </SectionContainer>
 
-      {/* Starters */}
+      {/* While You Wait */}
       <SectionContainer>
         <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+          While You Wait
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          {whileYouWait.map((item, index) => (
+            <MenuItem key={index} {...item} />
+          ))}
+        </div>
+      </SectionContainer>
+
+      {/* Starters */}
+      <SectionContainer background="gray">
+        <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Starters
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -265,8 +284,8 @@ const Menu = () => {
       </SectionContainer>
 
       {/* Main Courses */}
-      <SectionContainer background="gray">
-        <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+      <SectionContainer>
+        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Main Courses
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -277,8 +296,8 @@ const Menu = () => {
       </SectionContainer>
 
       {/* Sharing & Snacks */}
-      <SectionContainer>
-        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+      <SectionContainer background="gray">
+        <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Sharing & Snacks
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -289,10 +308,10 @@ const Menu = () => {
       </SectionContainer>
 
       {/* Desserts & Sides */}
-      <SectionContainer background="gray">
+      <SectionContainer>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+            <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
               Desserts
             </h2>
             <div>
@@ -302,7 +321,7 @@ const Menu = () => {
             </div>
           </div>
           <div>
-            <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+            <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
               Sides
             </h2>
             <div>
@@ -315,8 +334,8 @@ const Menu = () => {
       </SectionContainer>
 
       {/* Kids Menu */}
-      <SectionContainer>
-        <h2 className="sticky top-32 bg-white z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
+      <SectionContainer background="gray">
+        <h2 className="sticky top-32 bg-gray-50 z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center">
           Under 12's <span className="text-lg">(All with rustic fries)</span>
         </h2>
         <div className="max-w-4xl mx-auto">
