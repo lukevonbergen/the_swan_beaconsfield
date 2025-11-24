@@ -103,7 +103,7 @@ const ChristmasMenu = () => {
       <PageHero
         title="The Old Swan Christmas Menu"
         subtitle="Celebrate the festive season with us at The Old Swan. Enjoy traditional Christmas favorites and seasonal specials in the heart of Beaconsfield."
-        imageSrc="/images/oct_25/food-burger.png"
+        imageSrc="/images/PHOTO-2025-11-20-14-54-40.jpg"
         imageAlt="Festive dining at The Old Swan"
         textAlign="left"
       />
