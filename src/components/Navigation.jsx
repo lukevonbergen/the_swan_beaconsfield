@@ -18,7 +18,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white shadow-md z-50 font-serif">
+    <header className="fixed w-full bg-white shadow-md z-50 font-serif" style={{ top: 'var(--banner-height, 0px)' }}>
       <nav className="flex justify-between items-center h-20 px-10 md:px-16">
         {/* Logo */}
         <div className="logo flex items-center">
