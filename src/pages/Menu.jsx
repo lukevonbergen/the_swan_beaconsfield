@@ -81,7 +81,6 @@ const menuData = [
 
 const Menu = () => {
   const sideBySideCategories = menuData.filter((c) => c.sideBySide);
-  const regularCategories = menuData.filter((c) => !c.sideBySide);
   const renderedSideBySide = new Set();
 
   return (
