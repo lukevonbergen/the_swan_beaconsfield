@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
-import { useVenue } from '../lib/useVenue';
-
 const Contact = () => {
-  const { venue } = useVenue();
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
 
@@ -176,23 +173,23 @@ const Contact = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-brand-gray mb-2">Phone</h3>
-                  <a href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`} className="text-brand-dark hover:text-brand-gray transition-colors text-lg">
-                    {venue?.phone || '01494 312962'}
+                  <a href="tel:01494312962" className="text-brand-dark hover:text-brand-gray transition-colors text-lg">
+                    01494 312962
                   </a>
                 </div>
 
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-brand-gray mb-2">Email</h3>
-                  <a href={`mailto:${venue?.contact_email || 'info@theoldswanbeaconsfield.co.uk'}`} className="text-brand-dark hover:text-brand-gray transition-colors text-lg">
-                    {venue?.contact_email || 'info@theoldswanbeaconsfield.co.uk'}
+                  <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="text-brand-dark hover:text-brand-gray transition-colors text-lg">
+                    info@theoldswanbeaconsfield.co.uk
                   </a>
                 </div>
 
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-brand-gray mb-2">Address</h3>
                   <p className="text-brand-dark text-lg">
-                    {venue?.address_line_1 || '60 London End'}<br />
-                    {venue?.city || 'Beaconsfield'}{venue?.postcode ? `, ${venue.postcode}` : ', HP9 2JD'}
+                    60 London End<br />
+                    Beaconsfield, HP9 2JD
                   </p>
                 </div>
               </div>

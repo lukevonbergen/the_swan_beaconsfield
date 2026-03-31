@@ -1,48 +1,87 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
-import { supabase } from '../lib/supabase';
-import { useVenue } from '../lib/useVenue';
 
-const venueId = process.env.REACT_APP_VENUE_ID;
+const menuData = [
+  {
+    name: 'While You Wait',
+    items: [
+      { name: 'Scampi', price: '5.00' },
+      { name: 'Bread & Oil', price: '5.00', isVegetarian: true },
+      { name: 'Olives', price: '4.00', isVegetarian: true },
+    ],
+  },
+  {
+    name: 'Starters',
+    items: [
+      { name: 'Garlic and Herb King Prawns', description: 'Served with freshly baked rustic bread', price: '10.00' },
+      { name: 'Wild Mushroom Arancini', description: 'With truffle mayo and parmesan', price: '8.00', isVegetarian: true },
+      { name: 'Bubble & Squeak', description: 'Hollandaise, smoked bacon, poached egg', price: '8.00/15.00' },
+      { name: 'Sausage Rolls', description: 'With gravy', price: '7.50' },
+      { name: 'Baked Goats Cheese & Beetroot Salad', description: 'With rocket, candied walnuts and balsamic glaze', price: '9.00/14.00', isVegetarian: true },
+      { name: 'Soup of the Day', description: 'With rustic bread and butter', price: '7.00', isVegetarian: true },
+    ],
+  },
+  {
+    name: 'Main Courses',
+    items: [
+      { name: 'Beer Battered Fish and Chips', description: 'Peas and tartar sauce', price: '15.00' },
+      { name: 'King Prawn, Chilli & Herb Linguini', description: 'With roasted garlic, cherry tomatoes and herb sauce', price: '16.00' },
+      { name: 'Beef or Chicken Burger', description: 'Brioche bun with cheese, baby gem, tomato, gherkin and rustic fries. Add bacon +£1.50', price: '15.00' },
+      { name: '10oz Sirloin Steak', description: 'Vine roasted cherry tomatoes, sautéed mushrooms, onion rings, peppercorn sauce and rustic fries', price: '25.00' },
+      { name: 'Halls of Hazelmere Sausages', description: 'Mash, seasonal veg, and caramelised onion gravy', price: '15.00' },
+      { name: 'Braised Lamb Shank', description: 'Rosemary mash, roasted veg and red wine jus', price: '22.00' },
+      { name: 'Chicken, Leek & Mushroom Pie', description: 'With creamy mash potatoes and seasonal greens', price: '16.00' },
+    ],
+  },
+  {
+    name: 'Sharing & Snacks',
+    items: [
+      { name: 'BBQ Glazed Sticky Chicken Wings', description: 'With hot sauce', price: '12.00' },
+      { name: 'Baked Camembert', description: 'With red onion chutney and rustic bread', price: '12.00', isVegetarian: true },
+      { name: 'Nachos', description: 'Tortilla chips, melted cheese, salsa, sour cream and guacamole', price: '12.00', isVegetarian: true },
+      { name: 'A Taste of the Sea', description: 'Selection of prawns, squid tentacles, mussels, crab & catch of the day with savoury rice, fries, house dips and lemon wedge', price: '25.00' },
+      { name: 'All the Meats', description: 'Selection of tender BBQ glazed pork ribs, spicy chicken wings, pigs in blankets, chicken tenders, sausage rolls, fries, onion rings & our house dips', price: '22.00' },
+    ],
+  },
+  {
+    name: 'Desserts',
+    sideBySide: true,
+    items: [
+      { name: 'Malva Pudding', description: 'Traditional SA dessert', price: '6.50', isVegetarian: true },
+      { name: 'Chocolate Brownie', price: '6.50', isVegetarian: true },
+      { name: 'Ice Cream', description: 'Chocolate, strawberry, vanilla', price: '5.00', isVegetarian: true },
+      { name: 'Apple Crumble', description: 'With custard', price: '7.50', isVegetarian: true },
+      { name: 'Sorbet', description: 'Lemon, raspberry', price: '5.00', isVegetarian: true },
+    ],
+  },
+  {
+    name: 'Sides',
+    sideBySide: true,
+    items: [
+      { name: 'Rustic Fries', price: '4.50', isVegetarian: true },
+      { name: 'Mash', price: '4.50', isVegetarian: true },
+      { name: 'Roasted Carrots & Parsnips', price: '5.00', isVegetarian: true },
+      { name: 'Mixed Salad', price: '4.50', isVegetarian: true },
+      { name: 'Seasonal Greens', price: '5.00', isVegetarian: true },
+    ],
+  },
+  {
+    name: "Under 12's",
+    subtitle: '(All with rustic fries)',
+    items: [
+      { name: 'Chicken Tenders', description: 'Southern fried', price: '7.00' },
+      { name: 'Fish Goujons', price: '7.00' },
+      { name: 'Kids Burger', price: '7.00' },
+    ],
+  },
+];
 
 const Menu = () => {
-  const { venue } = useVenue();
-  const [menus, setMenus] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchMenus = async () => {
-      const { data } = await supabase
-        .from('menus')
-        .select('*, menu_categories(*, menu_items(*))')
-        .eq('venue_id', venueId)
-        .order('position');
-      setMenus(data || []);
-      setLoading(false);
-    };
-    fetchMenus();
-  }, []);
-
-  // Flatten all categories across all menus, sorted by position
-  const categories = menus
-    .flatMap((m) => m.menu_categories || [])
-    .sort((a, b) => a.position - b.position);
-
-  // Split categories for the side-by-side layout (Desserts & Sides)
-  const sideBySidePairs = [['Desserts', 'Sides']];
-
-  const isSideBySide = (catName) =>
-    sideBySidePairs.some((pair) => pair.includes(catName));
-
-  // Group side-by-side categories
-  const getSideBySidePartner = (catName) => {
-    const pair = sideBySidePairs.find((p) => p.includes(catName));
-    return pair ? pair.find((n) => n !== catName) : null;
-  };
-
+  const sideBySideCategories = menuData.filter((c) => c.sideBySide);
+  const regularCategories = menuData.filter((c) => !c.sideBySide);
   const renderedSideBySide = new Set();
 
   return (
@@ -64,10 +103,8 @@ const Menu = () => {
         textAlign="left"
       />
 
-      {/* SEO H1 */}
       <h1 className="sr-only">Traditional British Pub Food Menu Beaconsfield - Fresh Local Ingredients, Sunday Roasts & Classic Dishes at The Old Swan HP9</h1>
 
-      {/* Menu Note */}
       <SectionContainer background="gray">
         <div className="text-center mb-8">
           <p className="text-lg text-brand-gray leading-relaxed max-w-3xl mx-auto">
@@ -91,64 +128,54 @@ const Menu = () => {
         </div>
       </SectionContainer>
 
-      {loading && (
-        <SectionContainer>
-          <p className="text-center text-brand-gray">Loading menu...</p>
-        </SectionContainer>
-      )}
-
-      {/* Dynamic menu categories */}
-      {categories.map((cat, idx) => {
+      {menuData.map((cat, idx) => {
         if (renderedSideBySide.has(cat.name)) return null;
 
-        const items = (cat.menu_items || []).filter((i) => i.is_visible !== false).sort((a, b) => a.position - b.position);
         const bg = idx % 2 === 0 ? 'white' : 'gray';
         const bgClass = bg === 'gray' ? 'bg-gray-50' : 'bg-white';
 
-        // Check if this category should be side-by-side
-        if (isSideBySide(cat.name)) {
-          const partnerName = getSideBySidePartner(cat.name);
-          const partner = categories.find((c) => c.name === partnerName);
+        // Render Desserts & Sides side-by-side
+        if (cat.sideBySide && !renderedSideBySide.has(cat.name)) {
+          const partner = sideBySideCategories.find((c) => c.name !== cat.name && !renderedSideBySide.has(c.name));
           if (partner) {
             renderedSideBySide.add(cat.name);
             renderedSideBySide.add(partner.name);
-            const partnerItems = (partner.menu_items || []).filter((i) => i.is_visible !== false).sort((a, b) => a.position - b.position);
 
             return (
-              <SectionContainer key={cat.id} background={bg}>
+              <SectionContainer key={cat.name} background={bg}>
                 <div className="grid md:grid-cols-2 gap-12">
                   <div>
-                    <h2 className={`sticky top-32 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
+                    <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
                       {cat.name}
                     </h2>
                     <div>
-                      {items.map((item) => (
+                      {cat.items.map((item) => (
                         <MenuItem
-                          key={item.id}
+                          key={item.name}
                           name={item.name}
                           description={item.description || ''}
-                          price={Number(item.price).toFixed(2)}
-                          isVegetarian={item.is_vegetarian}
-                          isVegan={item.is_vegan}
-                          isGlutenFree={item.is_gluten_free}
+                          price={item.price}
+                          isVegetarian={item.isVegetarian}
+                          isVegan={item.isVegan}
+                          isGlutenFree={item.isGlutenFree}
                         />
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h2 className={`sticky top-32 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
+                    <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
                       {partner.name}
                     </h2>
                     <div>
-                      {partnerItems.map((item) => (
+                      {partner.items.map((item) => (
                         <MenuItem
-                          key={item.id}
+                          key={item.name}
                           name={item.name}
                           description={item.description || ''}
-                          price={Number(item.price).toFixed(2)}
-                          isVegetarian={item.is_vegetarian}
-                          isVegan={item.is_vegan}
-                          isGlutenFree={item.is_gluten_free}
+                          price={item.price}
+                          isVegetarian={item.isVegetarian}
+                          isVegan={item.isVegan}
+                          isGlutenFree={item.isGlutenFree}
                         />
                       ))}
                     </div>
@@ -160,21 +187,21 @@ const Menu = () => {
         }
 
         return (
-          <SectionContainer key={cat.id} background={bg}>
-            <h2 className={`sticky top-32 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
+          <SectionContainer key={cat.name} background={bg}>
+            <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
               {cat.name}
-              {cat.name === "Under 12's" && <span className="text-lg"> (All with rustic fries)</span>}
+              {cat.subtitle && <span className="text-lg"> {cat.subtitle}</span>}
             </h2>
             <div className="max-w-4xl mx-auto">
-              {items.map((item) => (
+              {cat.items.map((item) => (
                 <MenuItem
-                  key={item.id}
+                  key={item.name}
                   name={item.name}
                   description={item.description || ''}
-                  price={Number(item.price).toFixed(2)}
-                  isVegetarian={item.is_vegetarian}
-                  isVegan={item.is_vegan}
-                  isGlutenFree={item.is_gluten_free}
+                  price={item.price}
+                  isVegetarian={item.isVegetarian}
+                  isVegan={item.isVegan}
+                  isGlutenFree={item.isGlutenFree}
                 />
               ))}
             </div>
@@ -182,7 +209,6 @@ const Menu = () => {
         );
       })}
 
-      {/* Booking Section */}
       <SectionContainer background="gray">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-normal mb-6 text-brand-dark">
@@ -200,6 +226,7 @@ const Menu = () => {
               width="100%"
               height="100%"
               title="Book a table at The Old Swan"
+              loading="lazy"
             />
           </div>
 
@@ -210,8 +237,8 @@ const Menu = () => {
             <p className="text-lg text-brand-gray mb-6">
               Call us to reserve your table today
             </p>
-            <a href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`} className="nav-link text-xl font-bold">
-              {venue?.phone || '01494 312962'}
+            <a href="tel:01494312962" className="nav-link text-xl font-bold">
+              01494 312962
             </a>
             <div className="mt-6 text-sm text-brand-gray">
               <p>Available during opening hours:</p>
