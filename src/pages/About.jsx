@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <main className="pt-32">
+    <main className="pt-20">
       <Helmet>
         <title>About The Old Swan - Historic Traditional Pub Beaconsfield Since 1847 | HP9</title>
         <meta name="description" content="Discover The Old Swan's 175+ year history in Beaconsfield. Traditional British pub offering local business partnerships, community events & authentic HP9 hospitality since 1847." />

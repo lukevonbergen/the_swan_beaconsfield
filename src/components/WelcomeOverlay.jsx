@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useVenue } from '../lib/useVenue';
 
 const WelcomeOverlay = () => {
+  const { venue } = useVenue();
   const [overlayVisible, setOverlayVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -155,11 +157,11 @@ const WelcomeOverlay = () => {
             Book a Table
           </Link>
           <span className="hidden sm:inline text-brand-gray">•</span>
-          <a href="tel:01494312962" className="nav-link text-xl font-bold">
-            01494 312962
+          <a href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`} className="nav-link text-xl font-bold">
+            {venue?.phone || '01494 312962'}
           </a>
           <span className="hidden sm:inline text-brand-gray">•</span>
-          <a href="mailto:beaconsfield@tosbars.co.uk" className="nav-link text-xl font-bold">
+          <a href="mailto:info@theoldswanbeaconsfield.co.uk" className="nav-link text-xl font-bold">
             Email Us
           </a>
         </div>

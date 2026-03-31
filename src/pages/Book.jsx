@@ -1,10 +1,12 @@
 import React from 'react';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
+import { useVenue } from '../lib/useVenue';
 
 const Book = () => {
+  const { venue } = useVenue();
   return (
-    <main className="pt-32">
+    <main className="pt-20">
       <PageHero
         title="Book a Table"
         subtitle="Reserve your table for the perfect dining experience. From intimate dinners to family celebrations, we'll ensure your visit to The Old Swan is truly memorable."
@@ -40,8 +42,8 @@ const Book = () => {
             <p className="text-lg text-brand-gray mb-6">
               Call us to reserve your table today
             </p>
-            <a href="tel:01494312962" className="nav-link text-xl font-bold">
-              01494 312962
+            <a href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`} className="nav-link text-xl font-bold">
+              {venue?.phone || '01494 312962'}
             </a>
             <div className="mt-6 text-sm text-brand-gray">
               <p>Available during opening hours:</p>

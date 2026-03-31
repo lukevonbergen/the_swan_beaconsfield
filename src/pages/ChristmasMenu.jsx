@@ -3,9 +3,11 @@ import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
+import { useVenue } from '../lib/useVenue';
 import { Link } from 'react-router-dom';
 
 const ChristmasMenu = () => {
+  const { venue } = useVenue();
   const christmasStarters = [
     {
       name: "Roasted Onion and Sage Soup",
@@ -89,7 +91,7 @@ const ChristmasMenu = () => {
   ];
 
   return (
-    <main className="pt-32">
+    <main className="pt-20">
       <Helmet>
         <title>Christmas Menu - The Old Swan Beaconsfield | Festive Dining HP9</title>
         <meta name="description" content="Celebrate Christmas at The Old Swan Beaconsfield. Traditional festive menu featuring roast turkey, seasonal dishes, and indulgent desserts. Book your Christmas table in HP9 today!" />
@@ -203,8 +205,8 @@ const ChristmasMenu = () => {
             <p className="text-lg text-brand-gray mb-6">
               Call us to reserve your Christmas table today
             </p>
-            <a href="tel:01494312962" className="nav-link text-xl font-bold">
-              01494 312962
+            <a href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`} className="nav-link text-xl font-bold">
+              {venue?.phone || '01494 312962'}
             </a>
             <div className="mt-6 text-sm text-brand-gray">
               <p>Available during opening hours:</p>
