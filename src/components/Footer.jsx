@@ -1,6 +1,9 @@
 import React from 'react';
+import { useVenue } from '../lib/useVenue';
 
 const Footer = () => {
+  const { venue } = useVenue();
+
   return (
     <footer className="bg-white border-t border-gray-200 font-serif">
       <div className="flex flex-wrap py-12 px-10 md:px-16">
@@ -33,10 +36,13 @@ const Footer = () => {
               Visit Us
             </h3>
             <div className="text-brand-gray text-sm leading-relaxed">
-              <p>The Old Swan<br />
-              60 London End<br />
-              Beaconsfield<br />
-              HP9 2JD</p>
+              <p>
+                The Old Swan<br />
+                {venue?.address_line_1 && <>{venue.address_line_1}<br /></>}
+                {venue?.address_line_2 && <>{venue.address_line_2}<br /></>}
+                {venue?.city && <>{venue.city}<br /></>}
+                {venue?.postcode && <>{venue.postcode}</>}
+              </p>
             </div>
           </div>
 
@@ -47,25 +53,27 @@ const Footer = () => {
             </h3>
             <div className="space-y-1 text-sm">
               <p>
-                <a 
-                  href="tel:01494312962" 
+                <a
+                  href={`tel:${(venue?.phone || '01494 312962').replace(/\s/g, '')}`}
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
                 >
-                  01494 312962
+                  {venue?.phone || '01494 312962'}
                 </a>
               </p>
-              <p>
-                <a 
-                  href="mailto:beaconsfield@tosbars.co.uk" 
-                  className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
-                >
-                  beaconsfield@tosbars.co.uk
-                </a>
-              </p>
+              {venue?.contact_email && (
+                <p>
+                  <a
+                    href={`mailto:${venue.contact_email}`}
+                    className="text-brand-gray hover:text-brand-dark transition-colors duration-300"
+                  >
+                    {venue.contact_email}
+                  </a>
+                </p>
+              )}
               <div className="flex items-center gap-4">
-                <a 
-                  href="https://www.facebook.com/p/The-Old-Swan-Beaconsfield-61577926573912/" 
-                  target="_blank" 
+                <a
+                  href="https://www.facebook.com/p/The-Old-Swan-Beaconsfield-61577926573912/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300 flex items-center gap-2"
                 >
@@ -74,9 +82,9 @@ const Footer = () => {
                   </svg>
                   Facebook
                 </a>
-                <a 
-                  href="https://www.instagram.com/theoldswanbeaconsfield/" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/theoldswanbeaconsfield/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-brand-gray hover:text-brand-dark transition-colors duration-300 flex items-center gap-2"
                 >
