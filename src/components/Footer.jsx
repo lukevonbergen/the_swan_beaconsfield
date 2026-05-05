@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
 
   return (
-    <footer className="bg-white border-t border-gray-200 font-serif">
+    <footer className="relative z-10 bg-white border-t border-gray-200 font-serif">
       <div className="flex flex-wrap py-12 px-10 md:px-16">
         {/* Opening Hours */}
         <div className="w-full md:w-[400px] pr-0 md:pr-12 mb-8 md:mb-0">
@@ -92,6 +92,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="border-t border-gray-100 px-10 md:px-16 py-4 text-right">
+        <span className="text-xs text-brand-gray">Analytics by </span>
+        <a
+          href="https://trypeek.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-brand-dark underline underline-offset-2 hover:opacity-70 transition-opacity duration-300"
+        >
+          Peek
+        </a>
       </div>
     </footer>
   );
