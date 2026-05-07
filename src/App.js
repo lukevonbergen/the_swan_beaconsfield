@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import WelcomeOverlay from './components/WelcomeOverlay';
 // import ChristmasBanner from './components/ChristmasBanner';
 // import SixNationsBanner from './components/SixNationsBanner';
+import WorldCupBanner from './components/WorldCupBanner';
 import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
@@ -22,6 +23,7 @@ function App() {
       {isHomePage && <WelcomeOverlay />}
       {/* <ChristmasBanner /> */}
       {/* <SixNationsBanner /> */}
+      <WorldCupBanner />
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

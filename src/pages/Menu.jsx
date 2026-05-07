@@ -1,85 +1,155 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import PageHero from '../components/PageHero';
 import SectionContainer from '../components/SectionContainer';
 import MenuItem from '../components/MenuItem';
 
-const menuData = [
+const mainMenuData = [
   {
     name: 'While You Wait',
     items: [
       { name: 'Scampi', price: '5.00' },
       { name: 'Bread & Oil', price: '5.00', isVegetarian: true },
       { name: 'Olives', price: '4.00', isVegetarian: true },
+      { name: 'Chicken Tenders', price: '6.00' },
+      { name: 'Sausage Rolls', price: '7.50' },
     ],
   },
   {
-    name: 'Starters',
+    name: 'Lighter Bites',
     items: [
-      { name: 'Garlic and Herb King Prawns', description: 'Served with freshly baked rustic bread', price: '10.00' },
-      { name: 'Wild Mushroom Arancini', description: 'With truffle mayo and parmesan', price: '8.00', isVegetarian: true },
-      { name: 'Bubble & Squeak', description: 'Hollandaise, smoked bacon, poached egg', price: '8.00/15.00' },
-      { name: 'Sausage Rolls', description: 'With gravy', price: '7.50' },
-      { name: 'Baked Goats Cheese & Beetroot Salad', description: 'With rocket, candied walnuts and balsamic glaze', price: '9.00/14.00', isVegetarian: true },
-      { name: 'Soup of the Day', description: 'With rustic bread and butter', price: '7.00', isVegetarian: true },
+      { name: 'King Prawns', description: 'Mango chilli and pomegranate salsa with house salad and focaccia', price: '10.00 / 18.00 (main)' },
+      { name: 'Buffalo Mozzarella', description: 'Fresh avocado, tomato with rocket and basil oil', price: '8.00', isVegetarian: true },
+      { name: 'Duck Bon Bons', description: 'House salad and cranberry sauce', price: '9.00' },
+      { name: 'Heritage Beetroot Carpaccio', description: 'Cucumber relish and toasted walnuts', price: '8.00', isVegetarian: true },
+      { name: 'Bubble & Squeak', description: 'Hollandaise, smoked bacon, poached egg', price: '8.00 / 15.00 (main)' },
     ],
   },
   {
-    name: 'Main Courses',
+    name: 'Pub Favourites',
     items: [
+      { name: 'All Day English Breakfast', price: '12.00' },
       { name: 'Beer Battered Fish and Chips', description: 'Peas and tartar sauce', price: '15.00' },
-      { name: 'King Prawn, Chilli & Herb Linguini', description: 'With roasted garlic, cherry tomatoes and herb sauce', price: '16.00' },
-      { name: 'Beef or Chicken Burger', description: 'Brioche bun with cheese, baby gem, tomato, gherkin and rustic fries. Add bacon +£1.50', price: '15.00' },
-      { name: '10oz Sirloin Steak', description: 'Vine roasted cherry tomatoes, sautéed mushrooms, onion rings, peppercorn sauce and rustic fries', price: '25.00' },
-      { name: 'Halls of Hazelmere Sausages', description: 'Mash, seasonal veg, and caramelised onion gravy', price: '15.00' },
-      { name: 'Braised Lamb Shank', description: 'Rosemary mash, roasted veg and red wine jus', price: '22.00' },
-      { name: 'Chicken, Leek & Mushroom Pie', description: 'With creamy mash potatoes and seasonal greens', price: '16.00' },
+      { name: 'Beef, Chicken or Veg Burger', description: 'Brioche bun with cheese, baby gem, tomato, gherkin and rustic fries. Add bacon +£1.50', price: '15.00' },
+      { name: 'Chicken Schnitzel', description: 'Mushroom sauce with house salad and fries', price: '16.00' },
+      { name: 'Summer Salad', description: 'Baby gem lettuce, tomato, cucumber, avo, olives, red onion and peppers. Add chicken +£4.50 or prawns +£5', price: '12.00', isVegetarian: true },
+      { name: 'Charred Cauliflower Steak', description: 'Parsnip puree, lightly spiced chickpeas with greens', price: '14.00', isVegetarian: true },
     ],
   },
   {
-    name: 'Sharing & Snacks',
+    name: "What's the Chef's Smoking",
     items: [
-      { name: 'BBQ Glazed Sticky Chicken Wings', description: 'With hot sauce', price: '12.00' },
-      { name: 'Baked Camembert', description: 'With red onion chutney and rustic bread', price: '12.00', isVegetarian: true },
-      { name: 'Nachos', description: 'Tortilla chips, melted cheese, salsa, sour cream and guacamole', price: '12.00', isVegetarian: true },
-      { name: 'A Taste of the Sea', description: 'Selection of prawns, squid tentacles, mussels, crab & catch of the day with savoury rice, fries, house dips and lemon wedge', price: '25.00' },
-      { name: 'All the Meats', description: 'Selection of tender BBQ glazed pork ribs, spicy chicken wings, pigs in blankets, chicken tenders, sausage rolls, fries, onion rings & our house dips', price: '22.00' },
+      { name: 'BBQ Glazed Smoked Baby Back Pork Ribs', description: 'House slaw and fries', price: '19.50' },
+      { name: 'BBQ Glazed Sticky Chicken Wings', description: 'With hot sauce', price: '14.00' },
+      { name: 'Smoked Meat Platter', description: 'Selection of tender BBQ glazed pork ribs, spicy chicken wings, boerewors, smoked pulled pork, brisket, fries, onion rings, coleslaw and our house dips', price: '39.00' },
+      { name: 'Brisket Roll', price: '16.00' },
+      { name: 'BBQ Smoked Pulled Pork Roll', price: '12.00' },
     ],
   },
   {
-    name: 'Desserts',
+    name: 'Perfect With a Pint or Two',
+    items: [
+      { name: 'Baked Camembert', description: 'Red onion chutney and rustic bread', price: '12.00', isVegetarian: true },
+      { name: 'Nachos', description: 'Tortilla chips, melted cheese, salsa, sour cream and guacamole. Add chilli +£4', price: '12.00', isVegetarian: true },
+      { name: 'Cheesy Chips', description: 'Rustic fries topped with melted cheese', price: '9.00', isVegetarian: true },
+      { name: 'Loaded Fries', description: 'Smoked pulled pork, Guinness cheese and BBQ sauce', price: '12.00' },
+      { name: 'Charcuterie Board', price: '16.00' },
+    ],
+  },
+  {
+    name: 'Something Sweet',
     sideBySide: true,
     items: [
       { name: 'Malva Pudding', description: 'Traditional SA dessert', price: '6.50', isVegetarian: true },
       { name: 'Chocolate Brownie', price: '6.50', isVegetarian: true },
       { name: 'Ice Cream', description: 'Chocolate, strawberry, vanilla', price: '5.00', isVegetarian: true },
-      { name: 'Apple Crumble', description: 'With custard', price: '7.50', isVegetarian: true },
+      { name: 'Eton Mess', price: '7.50', isVegetarian: true },
       { name: 'Sorbet', description: 'Lemon, raspberry', price: '5.00', isVegetarian: true },
     ],
   },
   {
-    name: 'Sides',
+    name: 'A Little Extra',
     sideBySide: true,
     items: [
       { name: 'Rustic Fries', price: '4.50', isVegetarian: true },
-      { name: 'Mash', price: '4.50', isVegetarian: true },
-      { name: 'Roasted Carrots & Parsnips', price: '5.00', isVegetarian: true },
-      { name: 'Mixed Salad', price: '4.50', isVegetarian: true },
-      { name: 'Seasonal Greens', price: '5.00', isVegetarian: true },
+      { name: 'Onion Rings', price: '4.50', isVegetarian: true },
+      { name: 'Cheesy Garlic Bread', price: '4.50', isVegetarian: true },
+      { name: 'Tomato & Red Onion Salad', price: '4.50', isVegetarian: true },
+      { name: 'Savoury Rice', price: '4.50', isVegetarian: true },
+    ],
+  },
+];
+
+const sundayMenuData = [
+  {
+    name: 'A Great Place to Start',
+    items: [
+      { name: 'King Prawns', description: 'Mango chilli and pomegranate salsa with house salad and focaccia', price: '10.00 / 18.00 (main)' },
+      { name: 'Buffalo Mozzarella', description: 'Fresh avocado, tomato, rocket and basil oil', price: '8.00', isVegetarian: true },
+      { name: 'Duck Bon Bons', description: 'House salad and cranberry sauce', price: '9.00' },
+      { name: 'Beetroot Carpaccio', description: 'Cucumber relish and toasted walnuts with balsamic glaze', price: '8.00', isVegetarian: true },
+      { name: 'Sausage Rolls', description: 'With gravy', price: '7.50' },
     ],
   },
   {
-    name: "Under 12's",
-    subtitle: '(All with rustic fries)',
+    name: 'All Our Favourites',
+    subtitle: '(All roasts include crispy roasties, honey glazed parsnips and carrots, seasonal greens, red onion, Yorkshire pudding and gravy)',
     items: [
-      { name: 'Chicken Tenders', description: 'Southern fried', price: '7.00' },
-      { name: 'Fish Goujons', price: '7.00' },
-      { name: 'Kids Burger', price: '7.00' },
+      { name: 'Roast Sirloin of Beef', price: '20.00' },
+      { name: 'Smoked Beef Brisket', price: '23.00' },
+      { name: 'Roast Chicken', price: '18.00' },
+      { name: 'Roast Pork', price: '18.00' },
+      { name: 'Vegetable Roast Wellington', description: 'Vegan friendly', price: '16.00', isVegan: true },
+      { name: 'BBQ Smoked Baby Back Pork Ribs', description: 'Rustic fries, house salad and BBQ sauce', price: '19.50' },
+      { name: 'Chicken and Bacon Creamy Carbonara', description: 'Topped with parmesan', price: '16.00' },
+    ],
+  },
+  {
+    name: 'Feeling Hungry',
+    items: [
+      { name: 'Duo Roast', description: 'Choice of 2 meats', price: '23.00' },
+      { name: 'Trio Roast', description: 'Choice of 3 meats', price: '25.00' },
+    ],
+  },
+  {
+    name: 'Sharing',
+    sideBySide: true,
+    items: [
+      { name: 'Baked Camembert', description: 'Red onion chutney and rustic bread', price: '12.00', isVegetarian: true },
+      { name: 'Charcuterie Board', description: 'Selection of cold meats, cheese, pickles and rustic bread', price: '16.00' },
+    ],
+  },
+  {
+    name: 'A Little Extra',
+    sideBySide: true,
+    items: [
+      { name: 'Cauliflower Cheese', price: '5.00', isVegetarian: true },
+      { name: 'Stuffing', price: '5.00' },
+      { name: 'Cream Spinach', price: '5.00', isVegetarian: true },
+    ],
+  },
+  {
+    name: 'Something Sweet',
+    items: [
+      { name: 'Malva Pudding', description: 'Traditional South African dessert (like sticky toffee only better) with custard', price: '7.00', isVegetarian: true },
+      { name: 'Chocolate Brownie', description: 'Vanilla ice cream and chocolate sauce', price: '7.00', isVegetarian: true },
+      { name: 'Eton Mess', description: 'Mixed berries, crushed meringue with whipped cream', price: '7.00', isVegetarian: true },
+      { name: 'Ice Cream', description: 'Vanilla, strawberry, chocolate', price: '5.50', isVegetarian: true },
+      { name: 'Sorbet', description: 'Raspberry or lemon', price: '5.50', isVegetarian: true },
+    ],
+  },
+  {
+    name: "Under 12's (Only)",
+    items: [
+      { name: 'Kids Roast', description: 'Roast beef, pork or chicken served with veggies, gravy and Yorkshire pudding', price: '10.00' },
     ],
   },
 ];
 
 const Menu = () => {
+  const [activeMenu, setActiveMenu] = useState('main');
+  const menuData = activeMenu === 'sunday' ? sundayMenuData : mainMenuData;
+
   const sideBySideCategories = menuData.filter((c) => c.sideBySide);
   const renderedSideBySide = new Set();
 
@@ -106,9 +176,34 @@ const Menu = () => {
 
       <SectionContainer background="gray">
         <div className="text-center mb-8">
+          <div className="inline-flex border border-brand-dark rounded overflow-hidden mb-8">
+            <button
+              onClick={() => setActiveMenu('main')}
+              className={`px-6 py-3 text-sm uppercase tracking-wider transition-colors duration-300 ${
+                activeMenu === 'main'
+                  ? 'bg-brand-dark text-white'
+                  : 'bg-transparent text-brand-dark hover:bg-gray-100'
+              }`}
+            >
+              Main Menu
+            </button>
+            <button
+              onClick={() => setActiveMenu('sunday')}
+              className={`px-6 py-3 text-sm uppercase tracking-wider transition-colors duration-300 ${
+                activeMenu === 'sunday'
+                  ? 'bg-brand-dark text-white'
+                  : 'bg-transparent text-brand-dark hover:bg-gray-100'
+              }`}
+            >
+              Sunday Menu
+            </button>
+          </div>
           <p className="text-lg text-brand-gray leading-relaxed max-w-3xl mx-auto">
             All our delicious food dishes are prepared fresh daily at our Beaconsfield kitchen using locally sourced ingredients from HP9 suppliers where possible.
             Please inform our staff of any allergies or dietary requirements.
+          </p>
+          <p className="text-sm text-brand-gray italic mt-4 max-w-3xl mx-auto">
+            Menus are subject to change based on availability. A discretionary 12.5% service charge will be added.
           </p>
           <div className="flex justify-center gap-6 mt-6 text-sm">
             <span className="flex items-center gap-2">
@@ -133,7 +228,6 @@ const Menu = () => {
         const bg = idx % 2 === 0 ? 'white' : 'gray';
         const bgClass = bg === 'gray' ? 'bg-gray-50' : 'bg-white';
 
-        // Render Desserts & Sides side-by-side
         if (cat.sideBySide && !renderedSideBySide.has(cat.name)) {
           const partner = sideBySideCategories.find((c) => c.name !== cat.name && !renderedSideBySide.has(c.name));
           if (partner) {
@@ -141,7 +235,7 @@ const Menu = () => {
             renderedSideBySide.add(partner.name);
 
             return (
-              <SectionContainer key={cat.name} background={bg}>
+              <SectionContainer key={`${activeMenu}-${cat.name}`} background={bg}>
                 <div className="grid md:grid-cols-2 gap-12">
                   <div>
                     <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
@@ -186,11 +280,15 @@ const Menu = () => {
         }
 
         return (
-          <SectionContainer key={cat.name} background={bg}>
-            <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-8 text-brand-dark text-center`}>
+          <SectionContainer key={`${activeMenu}-${cat.name}`} background={bg}>
+            <h2 className={`sticky top-20 ${bgClass} z-10 py-4 text-3xl md:text-4xl font-normal mb-4 text-brand-dark text-center`}>
               {cat.name}
-              {cat.subtitle && <span className="text-lg"> {cat.subtitle}</span>}
             </h2>
+            {cat.subtitle && (
+              <p className="text-center text-brand-gray italic mb-8 max-w-2xl mx-auto">
+                {cat.subtitle}
+              </p>
+            )}
             <div className="max-w-4xl mx-auto">
               {cat.items.map((item) => (
                 <MenuItem
