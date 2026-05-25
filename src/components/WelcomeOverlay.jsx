@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+const OVERLAY_ENABLED = false;
+
 const WelcomeOverlay = () => {
   const [overlayVisible, setOverlayVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    if (!OVERLAY_ENABLED) return;
     let accumulatedScroll = 0;
     let touchStartY = 0;
 
@@ -116,6 +120,8 @@ const WelcomeOverlay = () => {
     };
   }, [overlayVisible]);
 
+  if (!OVERLAY_ENABLED) return null;
+
   if (!overlayVisible) {
     return null;
   }
@@ -131,9 +137,9 @@ const WelcomeOverlay = () => {
       }}
     >
       <div className="text-center max-w-2xl px-8">
-        <h1 
+        <h1
           className="text-4xl md:text-5xl lg:text-6xl font-normal text-brand-dark leading-tight mb-8"
-          style={{ 
+          style={{
             opacity: 1 - (scrollProgress * 2), // Fade out faster than the overlay moves
             transform: `translateY(${scrollProgress * 50}px)` // Slight parallax effect
           }}
@@ -143,7 +149,7 @@ const WelcomeOverlay = () => {
         </h1>
 
         {/* Contact Links */}
-        <div 
+        <div
           className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-8"
           style={{ 
             opacity: 1 - (scrollProgress * 2),
